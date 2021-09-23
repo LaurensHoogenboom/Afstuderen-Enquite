@@ -3,15 +3,14 @@
 ?>
                     
 <div class="description">
-    <h1>Plezierige momenten</h1>
+    <h1>Momenten waarin je de tijd verloor.</h1>
     <p>
-        Allereerst zijn daar de momenten die je leuk vond. Je vond het fijne momenten of je had een hoop lol. 
-        Welke momenten waren dat?
+        Op welke momenten verlies je de tijd in je wat je doet? Waarneer raak je makkelijk in een "flow"?
     </p>
 </div>
 
 <div class="content">
-    <div class="moment-list" id="joy-moment-list">
+    <div class="moment-list" id="lost_time-moment-list">
         <div class="list">
             <div class="moment">
                 <Textarea placeholder="Beschrijf het moment"></Textarea>
@@ -25,7 +24,7 @@
 
 <div class="actions">
     <div class="left">
-        <a class="button big" href="/moments/" onclick="saveMoments('joy', '#joy-moment-list')">Vorige</a>
+        <a class="button big" href="/moments/actions/energy.php" onclick="saveMoments('lost_time', '#lost_time-moment-list')">Vorige</a>
     </div>
 
     <div class="middle">
@@ -33,12 +32,12 @@
     </div>
 
     <div class="right">
-        <a class="button big" href="/moments/actions/energy.php" onclick="saveMoments('joy', '#joy-moment-list')">Volgende</a>
+        <a class="button big" href="/moments/actions/bending.php" onclick="saveMoments('lost_time', '#lost_time-moment-list')">Volgende</a>
     </div>
 </div>
 
 <script>
-    getMomentsInList('joy', $('#joy-moment-list'));
+    getMomentsInList('lost_time', $('#lost_time-moment-list'));
 </script>
 
 <?php 

@@ -3,58 +3,56 @@
 const addMomentToList = (list, value) => {
     $(list).find('.list').append(
         $('<div>').addClass('moment')
-        .append(
-            $("<textarea>").val(value)
-        )
-        .append(
-            $("<button>").addClass('remove').addClass('button').text("X")
-        )
+            .append(
+                $("<textarea>").val(value).attr('placeholder', 'Beschrijf het moment')
+            )
+            .append(
+                $("<button>").addClass('remove').addClass('button').text("X")
+            )
     );
 }
 
-$(document).on('click', '.moment-list .moment .remove', function() {
+$(document).on('click', '.moment-list .moment .remove', function () {
     $(this).parent().remove();
 });
 
-$(document).on('click', '.moment-list #add-moment', function() {
+$(document).on('click', '.moment-list #add-moment', function () {
     addMomentToList($(this).parent());
 });
 
-//joy
+//set moments
 
-$(document).on('click', '#joy-save', function(e) {
-    e.preventDefault();
+const saveMoments = (type, list) => {
+    let htmlMoments = $(list).find('.list .moment')
+    let moments = [];
+    let momentsType = `${type}Moments`;
 
-    let momentsList = [];
-    
-    if ($('.moment-list .moment').length > 0) {
-        $('.moment-list .moment').each(function() {
+    if (htmlMoments.length > 0) {
+        $(htmlMoments).each(function () {
             const momentDescription = $(this).find('textarea').val();
 
             if (momentDescription !== "") {
-                momentsList.push(momentDescription);
+                moments.push(momentDescription);
             }
         });
     }
 
-    localStorage.setItem('joyMoments', JSON.stringify(momentsList));
-
-    nextPage = $(this).attr('href');
-    window.location.href = nextPage;
-});
+    localStorage.setItem(momentsType, JSON.stringify(moments));
+}
 
 //get moments
 
 const getMomentsInList = (type, list) => {
-    if (type == "joy") {
-        const joyMoments = JSON.parse(localStorage.getItem('joyMoments'));
+    let moments = [];
+    let momentsType = `${type}Moments`;
 
-        if (joyMoments.length > 0) {
-            $(list).find('.list').empty();
+    moments = JSON.parse(localStorage.getItem(momentsType));
 
-            joyMoments.forEach(moment => {
-                addMomentToList(list, moment);
-            });
-        }
-    } 
+    if (moments.length > 0) {
+        $(list).find('.list').empty();
+
+        moments.forEach(moment => {
+            addMomentToList(list, moment);
+        });
+    }
 }

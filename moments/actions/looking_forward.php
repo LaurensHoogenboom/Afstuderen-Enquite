@@ -3,15 +3,14 @@
 ?>
                     
 <div class="description">
-    <h1>Plezierige momenten</h1>
+    <h1>Momenten waar je zin in hebt.</h1>
     <p>
-        Allereerst zijn daar de momenten die je leuk vond. Je vond het fijne momenten of je had een hoop lol. 
-        Welke momenten waren dat?
+        Zijn er momenten waar je naar uit kijkt? De momenten waar je écht zin in hebt.
     </p>
 </div>
 
 <div class="content">
-    <div class="moment-list" id="joy-moment-list">
+    <div class="moment-list" id="looking_forward-moment-list">
         <div class="list">
             <div class="moment">
                 <Textarea placeholder="Beschrijf het moment"></Textarea>
@@ -25,7 +24,7 @@
 
 <div class="actions">
     <div class="left">
-        <a class="button big" href="/moments/" onclick="saveMoments('joy', '#joy-moment-list')">Vorige</a>
+        <a class="button big" href="/moments/actions/bending.php" onclick="saveMoments('looking_forward', '#looking_forward-moment-list')">Vorige</a>
     </div>
 
     <div class="middle">
@@ -33,12 +32,12 @@
     </div>
 
     <div class="right">
-        <a class="button big" href="/moments/actions/energy.php" onclick="saveMoments('joy', '#joy-moment-list')">Volgende</a>
+        <a class="button big" href="/moments/actions/looking_forward.php" onclick="saveMoments('looking_forward', '#looking_forward-moment-list')">Volgende</a>
     </div>
 </div>
 
 <script>
-    getMomentsInList('joy', $('#joy-moment-list'));
+    getMomentsInList('looking_forward', $('#looking_forward-moment-list'));
 </script>
 
 <?php 
