@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p, h1, h2, h3, button, input, a, textarea {
+    font-family: sans-serif;
+    color: rgb(51,51,51);
+}
+
+p, button, input, textarea {
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+h1 {
+    font-weight: lighter;
+    padding-bottom: 15px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: white;
+    padding: 40px;
+}
+
+#form-wrapper {
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px;
+    box-shadow: 0px 10px 30px rgb(0,0,0,0.10);
+    max-width: 600px;   
+    border: 1px solid rgb(220,220,220);
+}
+
+#form-wrapper .description {
+    padding-bottom: 20px;
+}
+
+#form-wrapper .actions {
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    background-color: rgb(245,245,245);
+    margin: 0 -50px -50px -50px;
+    padding: 20px 50px;
+    border-radius: 0 0 10px 10px;
+}
+
+#form-wrapper .actions .middle {
+    display: flex;
+    justify-content: center;
+}
+
+#form-wrapper .content {
+    padding: 20px 0px 30px 0;
+}
+
+.button {
+    display: inline-block;
+    background-color: rgb(20,146,230);
+    border-radius: 100px;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+a.button {
+    text-decoration: none;
+}
+
+textarea {
+    border-radius: 10px;
+    border: 1px solid rgb(220,220,220);
+    padding: 10px 20px;
+    resize: vertical;
+}
+
+/*moment list*/
+
+.moment-list, .moment-list .list {
+    display: grid;
+    width: 100%;
+    grid-gap: 20px;
+}
+
+.moment-list .moment {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    grid-gap: 20px;
+    width: 100%;
+}
+
+.moment-list .moment .button {
+    align-self: flex-start;
+}
+
+.moment-list .moment textarea {
+    min-height: 40px;
+}
+
+.moment-list #add-moment {
+    margin: 0 auto;
+}
+
+
