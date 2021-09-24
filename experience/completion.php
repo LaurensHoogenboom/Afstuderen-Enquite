@@ -27,7 +27,7 @@
     </div>
 
     <div class="right">
-        <a class="button big" href="/moments/actions/joy.php">Volgende</a>
+        <a class="button big" href="/experience/moments/joy.php">Volgende</a>
     </div>
 </div>
 

@@ -24,7 +24,7 @@
 
 <div class="actions">
     <div class="left">
-        <a class="button big" href="/moments/actions/energy.php" onclick="saveMoments('lost_time', '#lost_time-moment-list')">Vorige</a>
+        <a class="button big" href="/experience/moments/energy.php" onclick="saveMoments('lost_time', '#lost_time-moment-list')">Vorige</a>
     </div>
 
     <div class="middle">
@@ -32,7 +32,7 @@
     </div>
 
     <div class="right">
-        <a class="button big" href="/moments/actions/bending.php" onclick="saveMoments('lost_time', '#lost_time-moment-list')">Volgende</a>
+        <a class="button big" href="/experience/moments/bending.php" onclick="saveMoments('lost_time', '#lost_time-moment-list')">Volgende</a>
     </div>
 </div>
 

@@ -23,7 +23,7 @@
     </div>
 
     <div class="middle">
-        <a class="button big" href="/moments/">Start</a>
+        <a class="button big" href="/experience/">Start</a>
     </div>
 
     <div class="right">
