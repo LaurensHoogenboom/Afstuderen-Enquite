@@ -32,7 +32,7 @@
     </div>
 
     <div class="right">
-        <a class="button big" href="/experience/moments/looking_forward.php" onclick="saveMoments('looking_forward', '#looking_forward-moment-list')">Volgende</a>
+        <a class="button big" href="/experience/moments/selection.php" onclick="saveMoments('looking_forward', '#looking_forward-moment-list')">Volgende</a>
     </div>
 </div>
 

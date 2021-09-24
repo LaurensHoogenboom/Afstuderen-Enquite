@@ -31,6 +31,10 @@
     </div>
 </div>
 
+<script>
+    initialize();
+</script>
+
 <?php 
     include $_SERVER['DOCUMENT_ROOT'] . "/src/php/footer.php"; 
 ?>
