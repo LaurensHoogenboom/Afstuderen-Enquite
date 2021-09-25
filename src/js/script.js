@@ -13,6 +13,17 @@ const makeid = (length) => {
 //types
 const momentTypes = ["joy", "energy", "lost_time", "bending", "looking_forward", "selected"];
 
+/*
+experience = {
+    id: makeid(6),
+    description: moment,
+    action: "",
+    feeling: "",
+    thougt: "",
+    ending: ""
+}
+*/
+
 //initialize
 
 const initialize = () => {
@@ -203,9 +214,12 @@ const createExperienceList = () => {
 //start experience completion
 
 const startExperienceCompletion = () => {
-    createExperienceList();
-
     let experiences = JSON.parse(localStorage.getItem('experienceList'));
+
+    if (!experiences) {
+        createExperienceList();
+        experiences = JSON.parse(localStorage.getItem('experienceList'));
+    }
 
     localStorage.setItem('currentExperienceIndex', 0);
     localStorage.setItem('experienceCount', experiences.length);
@@ -310,6 +324,47 @@ const nextExperience = () => {
         return false;
     }
 }
+
+//get first experience
+
+const firstExperience = () => {
+    localStorage.setItem('currentExperienceIndex', 0);
+}
+
+//create personal strength list
+
+const createPersonalStrengthList = () => {
+    let experiences = JSON.parse(localStorage.getItem('experienceList'));
+    let personalStrengthList = [];
+
+    experiences.forEach(xp => {
+        personalStrengthList.push({
+            id: makeid(6),
+            experienceID: xp.id,
+            usedRegularly: false,
+            grade: 1,
+            wantedToBeUsed: false,
+            remarks: ""
+        });
+    });
+
+    localStorage.setItem('personalStrengthList', JSON.stringify(personalStrengthList));
+}
+
+//start personal strength creation
+
+const startPersonalStrengthCreation = () => {
+    let personalStrengthList = JSON.parse(localStorage.getItem("personalStrengthList"));
+
+    if (!personalStrengthList) {
+        createPersonalStrengthList();
+        personalStrengthList = JSON.parse(localStorage.getItem("personalStrengthList"));
+    }
+
+    localStorage.setItem('currentPersonalStrengthIndex', 0);
+    localStorage.setItem('personalStrengthCount', personalStrengthList.length);
+}
+
 
 
 

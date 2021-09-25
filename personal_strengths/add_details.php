@@ -3,17 +3,16 @@
 ?>
 
 <div class="description">
-    <h1>Ervaringen</h1>
+    <h1>Ik voel me goed/sterk als...</h1>
     <p>
-        Momenten ervaar je. Een ervaring bestaat uit wat er gebeurde, je dacht, je voelde en deed. Aangezien dit gaat om
-        momenten waarin jij op je best was, zegt dit wat over jouw persoonlijke kracht of vaardigheden.
+        Alle ervaringen hebben we verwerkt in een zin. Het is nu aan jouw om ze goed lopend en kloppend te maken.
     </p>
 </div>
 
 <div class="content">
-    <form class="experience-completion-form" id="experience-completion-form">
+<form class="experience-completion-form" id="experience-completion-form">
         <div class="experience">
-            <h2>Moment <span id="experience-index"></span> van <span id="experience-count"></span></h2>
+            <h2>Ervaring <span id="experience-index"></span> van <span id="experience-count"></span></h2>
 
             <p id="experience-description">moment beschrijving</p>
 
@@ -37,21 +36,15 @@
 
 <div class="actions">
     <div class="left">
-        <a class="button big" href="/experience/completion/intro.php" for="submit_experience_form" onclick="return previousExperience()">Vorige</a>
     </div>
 
     <div class="middle">
-
+        <a class="button">Start</a>
     </div>
 
     <div class="right">
-        <a class="button big" href="/personal_strengths/intro.php" for="submit_experience_form" onclick="return nextExperience()">Volgende</a>
     </div>
 </div>
-
-<script>
-    getCurrentExperience();
-</script>
 
 <?php 
     include $_SERVER['DOCUMENT_ROOT'] . "/src/php/footer.php"; 
