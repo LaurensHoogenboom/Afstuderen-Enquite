@@ -5,7 +5,7 @@
 <div class="description">
     <h1>Momenten waarin je de tijd verloor.</h1>
     <p>
-        Op welke momenten verlies je de tijd in je wat je doet? Waarneer raak je makkelijk in een "flow"?
+        Op welke momenten verlies je de tijd in bij wat je doet? Waarneer raak je makkelijk in een "flow"?
     </p>
 </div>
 

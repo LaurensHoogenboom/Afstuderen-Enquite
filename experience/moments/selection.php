@@ -27,7 +27,7 @@
     </div>
 
     <div class="right">
-        <a class="button big" href="/experience/moments/selection.php" onclick="return saveMomentsSelection('#select-most-important-moments')">Volgende</a>
+        <a class="button big" href="/experience/completion/intro.php" onclick="return saveMomentsSelection('#select-most-important-moments')">Volgende</a>
     </div>
 </div>
 

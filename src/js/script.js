@@ -1,3 +1,15 @@
+//helpers
+const makeid = (length) => {
+    let result = '';
+    let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let charactersLength = characters.length;
+    for (let i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() *
+            charactersLength));
+    }
+    return result;
+}
+
 //types
 const momentTypes = ["joy", "energy", "lost_time", "bending", "looking_forward", "selected"];
 
@@ -123,13 +135,13 @@ const getMomentsInSelectList = (list) => {
         if (type == "selected") {
             if (momentOfTypeList.length > 0) {
                 momentOfTypeList.forEach(moment => {
-                    selectedMoments.push({description: moment, selected: false});
+                    selectedMoments.push({ description: moment, selected: false });
                 });
             }
         } else {
             if (momentOfTypeList.length > 0) {
                 momentOfTypeList.forEach(moment => {
-                    moments.push({description: moment, selected: false});
+                    moments.push({ description: moment, selected: false });
                 });
             }
         }
@@ -143,8 +155,8 @@ const getMomentsInSelectList = (list) => {
                 console.log(moment.description);
                 console.log(sMoment.description)
 
-                if(moment.description === sMoment.description) {
-                    
+                if (moment.description === sMoment.description) {
+
 
                     moments[index].selected = true;
                 }
@@ -167,3 +179,137 @@ const getMomentsInSelectList = (list) => {
         )
     }
 }
+
+//convert moments to experiences
+
+const createExperienceList = () => {
+    let selectedMoments = JSON.parse(localStorage.getItem('selectedMoments'));
+    let experiences = [];
+
+    selectedMoments.forEach(moment => {
+        experiences.push({
+            id: makeid(6),
+            description: moment,
+            action: "",
+            feeling: "",
+            thougt: "",
+            ending: ""
+        });
+    });
+
+    localStorage.setItem('experienceList', JSON.stringify(experiences));
+}
+
+//start experience completion
+
+const startExperienceCompletion = () => {
+    createExperienceList();
+
+    let experiences = JSON.parse(localStorage.getItem('experienceList'));
+
+    localStorage.setItem('currentExperienceIndex', 0);
+    localStorage.setItem('experienceCount', experiences.length);
+}
+
+const getCurrentExperience = () => {
+    let experiences = JSON.parse(localStorage.getItem('experienceList'));
+    let currentExperienceIndex = localStorage.getItem('currentExperienceIndex');
+    let currentExperience = experiences[currentExperienceIndex];
+
+    $('#experience-description').text(currentExperience.description);
+    $('#experience-action').val(currentExperience.action);
+    $('#experience-thought').val(currentExperience.thougt);
+    $('#experience-feeling').val(currentExperience.feeling);
+    $('#experience-ending').val(currentExperience.ending);
+
+    $("#experience-index").text(parseInt(currentExperienceIndex) + 1);
+    $("#experience-count").text(experiences.length);
+}
+
+//save experience
+
+const saveExperience = () => {
+    const experienceList = JSON.parse(localStorage.getItem('experienceList'));
+    const currentExperienceIndex = parseInt(localStorage.getItem('currentExperienceIndex'));
+    const currentExperience = experienceList[currentExperienceIndex];
+
+    const action = $('#experience-action').val();
+    const thougt = $('#experience-thought').val();
+    const feeling = $('#experience-feeling').val();
+    const ending = $('#experience-ending').val();
+
+    if (action, thougt, feeling) {
+        currentExperience.action = action;
+        currentExperience.thougt = thougt;
+        currentExperience.feeling = feeling;
+        currentExperience.ending = ending;
+
+        experienceList[currentExperienceIndex] = currentExperience;
+        localStorage.setItem('experienceList', JSON.stringify(experienceList));
+        return true;
+    } else return false;
+}
+
+//form error message
+
+const showFormError = (message) => {
+    $("#form-wrapper").animate({ scrollTop: 0 }, "slow");
+
+    $(".form-status").removeClass('hidden');
+    $(".form-status").text(message);
+}
+
+const hideFormError = () => {
+    $(".form-status").addClass('hidden');
+}
+
+//get previous experience
+
+const previousExperience = () => {
+    const currentExperienceIndex = parseInt(localStorage.getItem('currentExperienceIndex'));
+
+    //if not first item
+    if (currentExperienceIndex !== 0) {
+        let previousExperienceIndex = currentExperienceIndex - 1;
+        localStorage.setItem('currentExperienceIndex', previousExperienceIndex);
+        getCurrentExperience();
+
+        hideFormError();
+        $("#form-wrapper").animate({ scrollTop: 0 }, "slow");
+
+        return false;
+    } else {
+        return true;
+    }
+}
+
+//get next experience
+
+const nextExperience = () => {
+    //check and save
+    if (saveExperience()) {
+        let currentExperienceIndex = parseInt(localStorage.getItem('currentExperienceIndex'));
+        let experienceCount = parseInt(localStorage.getItem('experienceCount'));
+
+        //if last not item
+        if (currentExperienceIndex < experienceCount) {
+            let nextExperienceIndex = currentExperienceIndex + 1;
+            localStorage.setItem('currentExperienceIndex', nextExperienceIndex);
+            getCurrentExperience();
+
+            hideFormError();
+            $("#form-wrapper").animate({ scrollTop: 0 }, "slow");
+
+            return false;
+        } else {
+            return true;
+        }
+    } else {
+        showFormError("Vul alsjeblieft alle velden in.");
+        //not valid
+        return false;
+    }
+}
+
+
+
