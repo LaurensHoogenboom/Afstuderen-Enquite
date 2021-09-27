@@ -111,7 +111,7 @@ const nextExperience = () => {
         } else return true;
     } else {
         //not valid
-        showFormError("Vul alsjeblieft alle velden in.");
+        showFormError("Vul alsjeblieft alle vereiste velden in.");
         return false;
     }
 }

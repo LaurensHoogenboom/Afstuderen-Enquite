@@ -145,6 +145,9 @@ const getMomentsInSelectList = (list) => {
         moments.forEach(moment => {
             addMomentToSelectList(list, moment.description, moment.selected);
         });
+
+        $("#next-selection").removeClass("hidden");
+        $(".selection-description").removeClass("hidden");
     } else {
         $(list).append(
             $("<p>")
@@ -152,5 +155,7 @@ const getMomentsInSelectList = (list) => {
                     $("<i>").html(`Het lijkt er op dat je nog geen momenten hebt opgegeven. Ga <a href="${backlink}">terug</a>.`)
                 )
         )
+        $("#next-selection").addClass("hidden");
+        $(".selection-description").addClass("hidden");
     }
 }

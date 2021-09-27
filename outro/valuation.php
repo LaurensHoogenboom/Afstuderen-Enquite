@@ -47,9 +47,10 @@
             </label>
 
             <div class="range-wrapper" >
-                <label>Niet belangrijk</label>
+                <label>1</label>
                 <input id="grade" type="range" min="1" max="10" value="5">
-                <label>Heel belangrijk</label>
+                <label>10</label>
+                <i class="range-description">(1 = niet belangrijk, 10 = heel belangrijk)</i>
             </div>
 
             <label>Nog andere opmerkingen</label>

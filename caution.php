@@ -6,7 +6,7 @@
     <h1>Voor dat we beginnen...</h1>
     <p>
         In deze test wordt gevraagd naar (positieve) persoonlijke ervaringen. Om dit voor jouw als proefpersoon comfortabel te houden,
-        maken we gebruik van een techniek, waarbij de data die verzameld wordt, in eerste instantie alleen op jouw computer wordt opgeslagen.
+        maken we gebruik van een techniek, waarbij de data die verzameld wordt, in eerste instantie alleen op jouw apparaat wordt opgeslagen.
     </p>
     <p>
         Alleen jouw beoordeling van de uiteindelijke resultaten wordt automatisch met ons gedeeld. Aan het eind van de test kan je kiezen

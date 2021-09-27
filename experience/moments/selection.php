@@ -4,10 +4,10 @@
                     
 <div class="description">
     <h1>Momenten selecteren.</h1>
-    <p>
+    <p class="selection-description">
         Super! Je hebt nu een aantal momenten verzameld, die jij fijn vond. Nu moeten we een selectie maken.
     </p>
-    <p>
+    <p class="selection-description">
         Selecteer jouw beste momenten (maximaal 3). Probeer momenten te selecteren waarop jij op je best was. Probeer ook om zo verschillend mogelijke momenten te kiezen.
     </p>
 </div>
@@ -27,7 +27,7 @@
     </div>
 
     <div class="right">
-        <a class="button big" href="/experience/completion/intro.php" onclick="return saveMomentsSelection('#select-most-important-moments')">Volgende</a>
+        <a class="button big hidden" id="next-selection" href="/experience/completion/intro.php" onclick="return saveMomentsSelection('#select-most-important-moments')">Volgende</a>
     </div>
 </div>
 

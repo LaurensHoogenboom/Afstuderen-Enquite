@@ -10,7 +10,7 @@
 
 /*text*/
 
-p, h1, h2, h3, button, input, label, a, textarea, input[type="number"] {
+p, h1, h2, h3, button, input, label, a, i, textarea, input[type="number"] {
     font-family: sans-serif;
     color: rgb(51,51,51);
 }
@@ -83,6 +83,11 @@ textarea {
     padding-bottom: 0;
 }
 
+.range-wrapper .range-description {
+    grid-column: 1/4;
+    padding-bottom: 0;
+}
+
 .checkbox_wrapper {
     display: grid;
     grid-template-columns: max-content 1fr;
@@ -97,7 +102,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
     width: 100%;
     background-color: white;
     padding: 40px;
@@ -110,7 +115,7 @@ main {
     box-shadow: 0px 10px 30px rgb(0,0,0,0.10);
     max-width: 600px;   
     border: 1px solid rgb(220,220,220);
-    max-height: calc(100vh - 100px);
+    max-height: calc(var(--vh, 1vh) * 100 - 100px);
     overflow: auto;
 }
 
@@ -138,6 +143,35 @@ main {
     padding: 20px 0px 30px 0;
 }
 
+@media only screen and (max-width: 480px) {
+    main {
+        padding: 10px;
+    }
+
+    #form-wrapper {
+        max-height: calc(var(--vh, 1vh) * 100 - 20px);
+    }
+
+    #form-wrapper .actions {
+        bottom: -50px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    #form-wrapper {
+        padding: 40px 20px 20px 20px;
+    }
+
+    #form-wrapper .actions {
+        padding: 20px;
+        margin: 0 -20px -20px -20px;
+    }
+
+    #form-wrapper .actions {
+        bottom: -20px;
+    }
+}
+
 /*button*/
 
 .button {
@@ -152,6 +186,10 @@ main {
 
 a.button {
     text-decoration: none;
+}
+
+.button.hidden {
+    display: none;
 }
 
 /*moment list*/
@@ -171,10 +209,6 @@ a.button {
 
 .moment-list .moment .button {
     align-self: flex-start;
-}
-
-.moment-list .moment textarea {
-    min-height: 40px;
 }
 
 .moment-list #add-moment {
