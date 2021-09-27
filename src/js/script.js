@@ -55,6 +55,12 @@ const getBool = (string) => {
     return string == 'true' ? true : false;
 }
 
+//clean
+
+const cleanData = () => {
+    localStorage.clear();
+}
+
 //save result
 
 const saveResult = () => {
@@ -88,15 +94,7 @@ const saveResult = () => {
         console.log(response);
     });
 
-    window.location.href = 'https:/www.laureato.nl/';
-
-    return false;
-}
-
-//clean
-
-const cleanData = () => {
-    localStorage.clear();
+    cleanData();
 }
 
 //set dynamic viewheight
