@@ -9,6 +9,9 @@
 
     <script src="/src/js/jquery.js"></script>
     <script src="/src/js/script.js"></script>
+    <script src="/src/js/modules/moments.js"></script>
+    <script src="/src/js/modules/experience.js"></script>
+    <script src="/src/js/modules/personal_strength.js"></script>
 </head>
 <body>
     <main>

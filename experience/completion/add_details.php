@@ -11,8 +11,8 @@
 </div>
 
 <div class="content">
-    <form class="experience-completion-form" id="experience-completion-form">
-        <div class="experience">
+    <form class="item-form">
+        <div class="item">
             <h2>Moment <span id="experience-index"></span> van <span id="experience-count"></span></h2>
 
             <p id="experience-description">moment beschrijving</p>

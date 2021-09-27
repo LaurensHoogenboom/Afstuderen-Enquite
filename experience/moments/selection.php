@@ -8,7 +8,7 @@
         Super! Je hebt nu een aantal momenten verzameld, die jij fijn vond. Nu moeten we een selectie maken.
     </p>
     <p>
-        Selecteer jouw beste momenten (maximaal 5). Probeer momenten te selecteren waarop jij op je best was. Probeer ook om zo verschillend mogelijke momenten te kiezen.
+        Selecteer jouw beste momenten (maximaal 3). Probeer momenten te selecteren waarop jij op je best was. Probeer ook om zo verschillend mogelijke momenten te kiezen.
     </p>
 </div>
 

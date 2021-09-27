@@ -9,7 +9,7 @@
         Een van de dingen die hierbij hoort, is het weten wat je sterke punten zijn. Om dit te weten te komen moet een methode ontwikkeld worden.
     </p>
     <p>
-        Deze vragenlijst is zo'n methode. Deze test draait dus om de kwaliteit van de resultaten van deze methode.
+        Deze vragenlijst is zo'n methode. Deze test draait dus om de kwaliteit van de resultaten van deze vragenlijst.
     </p>
 </div>
 

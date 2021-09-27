@@ -33,6 +33,7 @@ form label {
 
 form textarea {
     margin-bottom: 25px;
+    min-height: 100px;
 }
 
 form textarea:last-child, form label:last-child {
@@ -157,19 +158,19 @@ textarea {
 
 /*experience completion*/
 
-.experience-completion-form {
+.item-form {
     background-color: rgb(245,245,245);
     border: 1px solid rgb(220,220,220);
     border-radius: 10px;
     padding: 20px;
 }
 
-.experience-completion-form .experience {
+.item-form .item {
     display: grid;
     padding-bottom: 20px;
 }
 
-.experience-completion-form .experience p {
+.item-form .item p {
     display: inline-block;
     padding-bottom: 20px;
     margin-bottom: 20px;
