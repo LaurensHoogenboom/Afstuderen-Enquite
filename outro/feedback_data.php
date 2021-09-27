@@ -34,7 +34,7 @@
     </div>
 
     <div class="middle">
-        <a class="button big" href="https://laureato.nl/" onclick="return saveResult();">Sluiten</a>
+        <a class="button big" href="https://laureato.nl/" onclick="return saveResult();">Verzenden</a>
     </div>
 
     <div class="right">
