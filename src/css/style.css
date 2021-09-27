@@ -33,11 +33,16 @@ form label {
 
 form textarea, form input[type="number"] {
     margin-bottom: 25px;
+    width: 100%;
 }
 
 form textarea:last-child, form label:last-child, input[type="number"] {
     margin-bottom: 0;
     padding-bottom: 0;
+}
+
+form label {
+    display: inline-block;
 }
 
 textarea, input[type="number"] {
@@ -76,6 +81,14 @@ textarea {
 
 .range-wrapper label, .range-wrapper input {
     padding-bottom: 0;
+}
+
+.checkbox_wrapper {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-gap: 20px;
+    margin-bottom: 20px;
+    align-items: baseline;
 }
 
 /*global*/

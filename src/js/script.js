@@ -55,6 +55,50 @@ const getBool = (string) => {
     return string == 'true' ? true : false;
 }
 
+//save result
+
+const saveResult = () => {
+    const personalStrengthList = JSON.parse(localStorage.getItem('personalStrengthList'));
+    const experiences = JSON.parse(localStorage.getItem('experienceList'));
+    const saveExtensiveData = $('#shareData').is(':checked');
+
+    const valutionList = [];
+
+    personalStrengthList.forEach(personalStrength => {
+        valutionList.push({
+            wantedToBeUsed: personalStrength.wantedToBeUsed,
+            usedRegularly: personalStrength.usedRegularly,
+            grade: personalStrength.grade,
+            remarks: personalStrength.remarks
+        });
+    });
+
+    const result = {
+        valuationList: valutionList,
+        experienceList: saveExtensiveData ? experiences : null,
+        personalStrengthList: saveExtensiveData ? personalStrengthList : null,
+        feedback: $("#feedback").val() 
+    }
+
+    $.ajax({
+        url: '/src/php/save.php',
+        method: 'POST',
+        data: {data: JSON.stringify(result)}
+    }).done(function(response) {
+        console.log(response);
+    });
+
+    window.location.href = 'https:/www.laureato.nl/';
+
+    return false;
+}
+
+//clean
+
+const cleanData = () => {
+    localStorage.clear();
+}
+
 
 
 
