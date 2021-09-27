@@ -16,7 +16,7 @@
 
             <label class="form-status hidden"></label>
 
-            <label>Ik voel me goed of sterk wanneer...</label>
+            <label>Ik voel me goed of sterk als ik...</label>
             <textarea id="personal-strength-action"></textarea>
 
             <label>tijdens...</label>
@@ -44,7 +44,7 @@
     </div>
 
     <div class="right">
-        <a class="button" href="/personal_strengths/add_details.php"
+        <a class="button" href="/outro/intro.php"
             onclick="return nextPersonalStrength()">Volgende</a>
     </div>
 </div>

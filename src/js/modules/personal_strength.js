@@ -104,7 +104,8 @@ const savePersonalStrength = () => {
 
 const previousPersonalStrength = () => {
     const currentPersonalStrengthIndex = parseInt(localStorage.getItem("currentPersonalStrengthIndex"));
-    
+    savePersonalStrength();
+
     //if not first item
     if (currentPersonalStrengthIndex !== 0) {
         let previousPersonalStrengthIndex = currentPersonalStrengthIndex - 1;

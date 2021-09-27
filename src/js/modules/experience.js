@@ -75,6 +75,7 @@ const saveExperience = () => {
 
 const previousExperience = () => {
     const currentExperienceIndex = parseInt(localStorage.getItem('currentExperienceIndex'));
+    saveExperience();
 
     //if not first item
     if (currentExperienceIndex !== 0) {

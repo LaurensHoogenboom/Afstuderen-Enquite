@@ -1,15 +1,3 @@
-//helpers
-const makeid = (length) => {
-    let result = '';
-    let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let charactersLength = characters.length;
-    for (let i = 0; i < length; i++) {
-        result += characters.charAt(Math.floor(Math.random() *
-            charactersLength));
-    }
-    return result;
-}
-
 //types
 const momentTypes = ["joy", "energy", "lost_time", "bending", "looking_forward", "selected"];
 
@@ -34,7 +22,7 @@ const initialize = () => {
     });
 }
 
-//form error message
+//form
 
 const showFormError = (message) => {
     $("#form-wrapper").animate({ scrollTop: 0 }, "slow");
@@ -47,11 +35,27 @@ const hideFormError = () => {
     $(".form-status").addClass('hidden');
 }
 
-//scroll to top of form
-
 const scrollToFormTop = () => {
     $("#form-wrapper").animate({ scrollTop: 0 }, "slow");
 }
+
+//helpers
+const makeid = (length) => {
+    let result = '';
+    let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let charactersLength = characters.length;
+    for (let i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() *
+            charactersLength));
+    }
+    return result;
+}
+
+const getBool = (string) => {
+    return string == 'true' ? true : false;
+}
+
+
 
 
 
