@@ -5,11 +5,11 @@
 <div class="description">
     <h1>Een Momentje...</h1>
     <p>
-        Een van de makkelijkste manieren om er achter te komen waar jij echt goed in bent, is het kijken naar jouw 'beste momenten'.
-        Als je vervolgens deze momenten uitpluist komt je, als het goed is uit, bij een speciale vaardigheid of sterke kant van jou als persoon.
+        Een van de makkelijkste manieren om te bepalen waarom iets, ondanks je vaardigheden wel of niet lukt, is het verder
+        uitdiepen van deze situaties.
     </p>
     <p>
-        Onze eerste stap is dus een lijst te maken van jouw beste momenten. We gaan stap voor stap een aantal soorten momenten af.
+        Onze eerste stap is dus een lijst te maken van deze momenten.
     </p>
 </div>
 
@@ -27,7 +27,7 @@
     </div>
 
     <div class="right">
-        <a class="button big" href="/experience/moments/joy.php">Volgende</a>
+        <a class="button big" href="/experience/moments/skilled_and_succeeded.php">Volgende</a>
     </div>
 </div>
 

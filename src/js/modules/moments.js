@@ -36,10 +36,10 @@ const addMomentToSelectList = (list, value, selected) => {
 
 //set moments
 
-const saveMoments = (type, list) => {
+const saveMoments = (type, required = false) => {
     let moments = [];
-    let momentsType = `${type}Moments`;
-    let htmlMoments = $(list).find('.list .moment')
+    let momentsType = `${type}_moments`;
+    let htmlMoments = $(`#${type}_list`).find('.list .moment')
 
     if (htmlMoments.length > 0) {
         $(htmlMoments).each(function () {
@@ -52,6 +52,16 @@ const saveMoments = (type, list) => {
     }
 
     localStorage.setItem(momentsType, JSON.stringify(moments));
+
+    if (required) {
+        if (moments.length > 0) {
+            return true;
+        } else {
+            showFormError("Geef minstens één moment op.");
+
+            return false;
+        }
+    } else return true;
 }
 
 const saveMomentsSelection = (list) => {
@@ -81,14 +91,15 @@ const saveMomentsSelection = (list) => {
 
 //get moments
 
-const getMomentsInList = (type, list) => {
+const getMomentsInList = (type) => {
     let moments = [];
-    let momentsType = `${type}Moments`;
+    let momentsType = `${type}_moments`;
+    let list = $(`#${type}_list`)
 
     moments = JSON.parse(localStorage.getItem(momentsType));
 
     if (moments.length > 0) {
-        $(list).find('.list').empty();
+        list.find('.list').empty();
 
         moments.forEach(moment => {
             addMomentToList(list, moment);
@@ -104,7 +115,7 @@ const getMomentsInSelectList = (list) => {
     //get selected moments and complete moment list
 
     momentTypes.forEach(type => {
-        const typeName = `${type}Moments`;
+        const typeName = `${type}-moments`;
         const momentOfTypeList = JSON.parse(localStorage.getItem(typeName));
 
         if (type == "selected") {

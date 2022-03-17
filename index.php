@@ -5,11 +5,12 @@
 <div class="description">
     <h1>Hi! Leuk dat je mee doet met dit onderzoek.</h1>
     <p>
-        Voor school ben ik bezig met een onderzoek dat draait om gedragsverandering en het stellen van lange termijndoelen.
-        Een van de dingen die hierbij hoort, is het weten wat je sterke punten zijn. Om dit te weten te komen moet een methode ontwikkeld worden.
+        Soms zijn er van die momenten dat je weet dat je iets kan, maar dat het, doordat je bijvoorbeeld zenuwachtig bent, toch niet lukt.
+        Als dit veel voorkomt kan dit vervelende gevolgen hebben voor bijvoorbeeld je studie of je sociale contacten.
     </p>
     <p>
-        Deze vragenlijst is zo'n methode. Deze test draait dus om de kwaliteit van de resultaten van deze vragenlijst.
+        In dit project ben ik op zoek naar een manier waarop ik deze mensen, in dat soort situaties kan helpen. Daarvoor moet ik eerst weten
+        welke factoren een bepaalde rol spelen, tijdens dit soort momenten. Vandaar deze vragenlijst.
     </p>
 </div>
 

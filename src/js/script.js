@@ -1,5 +1,5 @@
 //types
-const momentTypes = ["joy", "energy", "lost_time", "bending", "looking_forward", "selected"];
+const momentTypes = ["skilled_and_succeeded", "not_skilled_but_succeeded", "skilled_but_failed"];
 
 /*
 experience = {
@@ -17,7 +17,7 @@ experience = {
 const initialize = () => {
     momentTypes.forEach(type => {
         list = [];
-        listName = `${type}Moments`;
+        listName = `${type}_moments`;
         localStorage.setItem(listName, JSON.stringify(list));
     });
 }

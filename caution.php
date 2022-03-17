@@ -9,12 +9,11 @@
         maken we gebruik van een techniek, waarbij de data die verzameld wordt, in eerste instantie alleen op jouw apparaat wordt opgeslagen.
     </p>
     <p>
-        Alleen jouw beoordeling van de uiteindelijke resultaten wordt automatisch met ons gedeeld. Aan het eind van de test kan je kiezen
-        om alsnog alle data te delen.
+        De data wordt vervolgens opgeslagen in een database die door mijzelf gehost wordt. De data blijft daar, en wordt niet gedeeld.
     </p>
     <p>
         <i>
-            Benieuwd hoe we dit doen? Op <a href="https://javascript.info/localstorage">deze<a> pagina kan je hier meer over lezen.
+            Benieuwd naar de gebruikte technieken? Op <a href="https://javascript.info/localstorage">deze<a> pagina kan je hier meer over lezen.
             Toch nog vragen? Neem gerust <a href="mailto:info@laureato.nl">contact</a> op!
         </i>
     </p>
@@ -37,10 +36,6 @@
         
     </div>
 </div>
-
-<script>
-    initialize();
-</script>
 
 <?php 
     include $_SERVER['DOCUMENT_ROOT'] . "/src/php/footer.php"; 
