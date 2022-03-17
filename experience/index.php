@@ -5,8 +5,7 @@
 <div class="description">
     <h1>Een Momentje...</h1>
     <p>
-        Een van de makkelijkste manieren om te bepalen waarom iets, ondanks je vaardigheden wel of niet lukt, is het verder
-        uitdiepen van deze situaties.
+        Omdat te bepalen waarom iets, ondanks je vaardigheden, wel of niet lukt, moeten we deze situaties uitdiepen.
     </p>
     <p>
         Onze eerste stap is dus een lijst te maken van deze momenten.
