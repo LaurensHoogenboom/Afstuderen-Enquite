@@ -10,12 +10,12 @@
 
 /*text*/
 
-p, h1, h2, h3, button, input, label, a, i, textarea, input[type="number"] {
+p, h1, h2, h3, button, input, label, a, i, textarea, input[type="number"], select {
     font-family: sans-serif;
     color: rgb(51,51,51);
 }
 
-p, button, input, textarea {
+p, button, input, textarea, select {
     font-size: 16px;
     padding-bottom: 10px;
 }
@@ -31,7 +31,7 @@ form label {
     padding-bottom: 15px;
 }
 
-form textarea, form input[type="number"] {
+form textarea, form input[type="number"], form select {
     margin-bottom: 25px;
     width: 100%;
 }
@@ -45,7 +45,7 @@ form label {
     display: inline-block;
 }
 
-textarea, input[type="number"] {
+textarea, input[type="number"], select {
     border-radius: 10px;
     border: 1px solid rgb(220,220,220);
     padding: 10px 20px;

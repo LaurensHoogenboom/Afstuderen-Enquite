@@ -5,18 +5,19 @@
 <div class="description">
     <h1>Laat eens kijken...</h1>
     <p>
-        Nu je een selectie hebt gemaakt van de momenten waarvan jij vond, dat jij op je best was, kunnen we die gaan uitdiepen.
-        Zodoende kunnen we jouw kracht in zo'n moment vinden.
+        We hebben nu een lijst met momenten. Deze moeten we verder uitdiepen, zodat we kunnen bepalen, waarom iets wel of niet lukte.
     </p>
     <p>
         <i>
-        Toch nog niet helemaal zeker over de selectie? Je kan deze nog <a href="/experience/moments/selection.php">aanpassen</a>.
+            Toch nog niet helemaal zeker over de lijst? Je kan deze nog <a href="/experience/moments/skilled_and_succeeded.php">aanpassen</a>.
         </i>
     </p>
 </div>
 
 <div class="content">
-    
+    <script>
+        createCompleteMomentList();
+    </script>
 </div>
 
 <div class="actions">

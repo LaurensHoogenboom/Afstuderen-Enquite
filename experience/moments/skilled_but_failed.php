@@ -34,7 +34,7 @@
     </div>
 
     <div class="right">
-        <a class="button big" href="/experience/moments/energy.php" onclick="return saveMoments('skilled_but_failed', 'true')">Volgende</a>
+        <a class="button big" href="/experience/completion/intro.php" onclick="return saveMoments('skilled_but_failed', 'true')">Volgende</a>
     </div>
 </div>
 

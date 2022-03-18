@@ -19,14 +19,23 @@
 
             <label class="form-status hidden"></label>
 
-            <label>Wat was jouw rol in dit moment? *</label>
-            <textarea id="experience-action" required></textarea>
-
             <label>Wat dacht je tijdens dit moment? *</label>
             <textarea id="experience-thought" required></textarea>
 
             <label>Hoe voelde je? *</label>
-            <textarea id="experience-feeling" required></textarea>
+            <select id="experience-feeling" onchange="toggleFeelingInput()">
+                <option selected disabled hidden>Kies een gevoel</option>
+                <option value="happy">Blij</option>
+                <option value="afraid">Bang</option>
+                <option value="angry">Boos</option>
+                <option value="sad">Bedroefd</option>
+                <option value="custom">Anders, namelijk...</option>
+            </select>
+
+            <textarea id="experience-feeling-custom" class="hidden"></textarea>
+
+            <label>Wat was jouw rol in dit moment? *</label>
+            <textarea id="experience-action" required></textarea>
 
             <label>Hoe eindigde het?</label>
             <textarea id="experience-ending"></textarea>

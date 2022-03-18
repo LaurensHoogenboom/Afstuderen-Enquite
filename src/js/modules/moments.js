@@ -184,3 +184,24 @@ const getMomentsInSelectList = (list) => {
         $(".selection-description").addClass("hidden");
     }
 }
+
+//create complete momentlist
+//used when no selection is available
+
+const createCompleteMomentList = () => {
+    const moments = [];
+
+    momentTypes.forEach(type => {
+        listName = `${type}_moments`;
+        list = JSON.parse(localStorage.getItem(listName));
+
+        list.forEach(momentOfType => {
+            moments.push({
+                type: type,
+                description: momentOfType
+            });
+        });
+    });
+
+    localStorage.setItem('selectedMoments', JSON.stringify(moments));
+}

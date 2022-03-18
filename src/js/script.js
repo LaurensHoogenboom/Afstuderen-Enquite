@@ -1,5 +1,6 @@
 //types
 const momentTypes = ["skilled_and_succeeded", "not_skilled_but_succeeded", "skilled_but_failed"];
+const emotionTypes = ["happy", "angry", "sad", "afraid"];
 
 /*
 experience = {

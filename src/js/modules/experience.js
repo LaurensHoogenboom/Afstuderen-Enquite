@@ -7,7 +7,8 @@ const createExperienceList = () => {
     selectedMoments.forEach(moment => {
         experiences.push({
             id: makeid(6),
-            description: moment,
+            description: moment.description,
+            type: moment.type,
             action: "",
             feeling: "",
             thougt: "",
@@ -45,6 +46,18 @@ const getCurrentExperience = () => {
 
     $("#experience-index").text(parseInt(currentExperienceIndex) + 1);
     $("#experience-count").text(experiences.length);
+}
+
+//feeling input
+
+const toggleFeelingInput = () => {
+    if ($("#experience-feeling").val() == "custom") {
+        $("#experience-feeling-custom").removeClass('hidden');
+        $("#experience-feeling-custom").attr('required', true);
+    } else {
+        $("#experience-feeling-custom").addClass('hidden');
+        $("#experience-feeling-custom").attr('required', false);
+    }
 }
 
 //save experience
