@@ -16,6 +16,8 @@ experience = {
 //initialize
 
 const initialize = () => {
+    localStorage.clear();
+
     momentTypes.forEach(type => {
         list = [];
         listName = `${type}_moments`;

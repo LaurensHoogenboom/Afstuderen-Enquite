@@ -5,8 +5,8 @@
 <div class="description">
     <h1>Ervaringen</h1>
     <p>
-        Momenten ervaar je. Een ervaring bestaat uit wat er gebeurde, je dacht, je voelde en deed. Aangezien dit gaat om
-        momenten waarin jij op je best was, zegt dit wat over jouw persoonlijke kracht of vaardigheden.
+        Momenten ervaar je. Een ervaring bestaat uit wat er gebeurde, je dacht, je voelde en deed. Iets in deze
+        ervaring zorgde ervoor dat je jezelf wel of niet zeker voelde over de situatie.
     </p>
 </div>
 

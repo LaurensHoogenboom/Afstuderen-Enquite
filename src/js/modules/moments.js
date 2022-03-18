@@ -119,6 +119,8 @@ const getMomentsInList = (type) => {
             addMomentToList(list, moment);
         });
     }
+
+    toggleAddMomentButton(list);
 }
 
 const getMomentsInSelectList = (list) => {

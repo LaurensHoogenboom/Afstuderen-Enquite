@@ -19,6 +19,12 @@ const createExperienceList = () => {
     localStorage.setItem('experienceList', JSON.stringify(experiences));
 }
 
+//check if emotion is customized
+
+const emotionIsCustom = (emotion) => {
+    return !emotionTypes.includes(emotion);
+}
+
 //start experience completion
 
 const startExperienceCompletion = () => {
@@ -41,8 +47,20 @@ const getCurrentExperience = () => {
     $('#experience-description').text(currentExperience.description);
     $('#experience-action').val(currentExperience.action);
     $('#experience-thought').val(currentExperience.thougt);
-    $('#experience-feeling').val(currentExperience.feeling);
     $('#experience-ending').val(currentExperience.ending);
+
+    if (currentExperience.feeling) {
+        if (emotionIsCustom(currentExperience.feeling)) {
+            $('#experience-feeling').val("custom");
+            toggleFeelingInput();
+            $("#experience-feeling-custom").val(currentExperience.feeling);
+        } else {
+            $('#experience-feeling').val(currentExperience.feeling);
+            toggleFeelingInput();
+        }
+    } else {
+        $('#experience-feeling').prop('selectedIndex',-1);
+    }
 
     $("#experience-index").text(parseInt(currentExperienceIndex) + 1);
     $("#experience-count").text(experiences.length);
@@ -69,10 +87,15 @@ const saveExperience = () => {
 
     const action = $('#experience-action').val();
     const thougt = $('#experience-thought').val();
-    const feeling = $('#experience-feeling').val();
+    let feeling = $('#experience-feeling').val();
     const ending = $('#experience-ending').val();
 
-    if (action, thougt, feeling) {
+    
+    if (emotionIsCustom(feeling)) {
+        feeling = $('#experience-feeling-custom').val();
+    }
+
+    if (action && thougt && feeling) {
         currentExperience.action = action;
         currentExperience.thougt = thougt;
         currentExperience.feeling = feeling;
