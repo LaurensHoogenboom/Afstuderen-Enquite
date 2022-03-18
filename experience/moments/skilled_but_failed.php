@@ -12,7 +12,7 @@
 <div class="content">
     <label class="form-status hidden"></label>
 
-    <div class="moment-list" id="skilled_but_failed_list">
+    <div class="moment-list" id="skilled_but_failed_list" data-max="2">
         <div class="list">
             <div class="moment">
                 <Textarea placeholder="Beschrijf het moment"></Textarea>

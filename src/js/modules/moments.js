@@ -13,12 +13,26 @@ const addMomentToList = (list, value) => {
 }
 
 $(document).on('click', '.moment-list .moment .remove', function () {
+    const list = $(this).closest('.moment-list');
     $(this).parent().remove();
+    toggleAddMomentButton(list);
 });
 
 $(document).on('click', '.moment-list #add-moment', function () {
     addMomentToList($(this).parent());
+    toggleAddMomentButton($(this).parent());
 });
+
+const toggleAddMomentButton = (list) => {
+    const max = list.data('max');
+    const momentCount = list.find('.moment').length;
+
+    if (max && momentCount >= max) {
+        list.find('#add-moment').addClass('disabled');
+    } else {
+        list.find('#add-moment').removeClass('disabled');
+    }
+}
 
 //moment select list
 

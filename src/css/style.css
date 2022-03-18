@@ -198,6 +198,11 @@ a.button {
     display: none;
 }
 
+.button.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
 /*moment list*/
 
 .moment-list, .moment-list .list, .moment-select-list {
