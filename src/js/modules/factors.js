@@ -14,7 +14,7 @@ const getCurrentFactorInventarisation = () => {
             setOptionsVariation("ook", "", "", "niet");
             break;
         case "not_skilled_but_succeeded":
-            setDescriptionVariation("niet", "maar", "wel");
+            setDescriptionVariation("niet", "maar", "toch");
             setOptionsVariation("ook niet", "me niet", "niet", "");
             break;
         case "skilled_but_failed":
