@@ -32,7 +32,7 @@
                 <option value="angry">Boos</option>
                 <option value="sad">Bedroefd</option>
                 <option value="ashamed">Beschaamd</option>
-                <option value="custom">Anders, namelijk...</option>
+                <option value="custom">Andere, of meerdere emoties namelijk...</option>
             </select>
 
             <textarea id="experience-feeling-custom" class="hidden"></textarea>

@@ -30,8 +30,8 @@ const loadCurrentImagination = () => {
         const positive = factor.type == "skilled_and_succeeded" ? true : false;
         let factorText = ""
 
-        if (factor.text) {
-            factorText = `${getFactorText(factor.type, positive).slice(0, -1)}: ${factor.description}`
+        if (factor.description) {
+            factorText = `${getFactorText(factor.type, positive).replace(/\./g, '')}: ${factor.description}`
         } else {
             factorText = `${getFactorText(factor.type, positive)}`
         }

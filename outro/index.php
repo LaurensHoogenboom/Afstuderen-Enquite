@@ -10,6 +10,9 @@
     <p>
         Mocht je nog vragen of opmerkingen hebben over deze test, dan kan je ze hieronder achterlaten.
     </p>
+    <p>
+        Vind je het oké als ik nog een keer contact met je opneem voor dit project? Laat dan hieronder je gegevens achter.
+    </p>
 </div>
 
 <div class="content">
