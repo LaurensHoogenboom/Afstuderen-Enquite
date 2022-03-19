@@ -3,7 +3,7 @@
 ?>
 
 <div class="description">
-    <h1>Andersom...</h1>
+    <h1>Andersom... 🔁</h1>
     <p>
         Natuurlijk kunnen factoren twee kanten opwerken. Daarom gaan we tenslotte nog kijken naar
         hoe bepaalde invloeden, situatie anders hadden kunnen laten verlopen.

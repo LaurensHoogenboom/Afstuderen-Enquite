@@ -3,7 +3,7 @@
 ?>
                     
 <div class="description">
-    <h1>Succesvolle momenten</h1>
+    <h1>Succesvolle momenten 💪</h1>
     <p>
         Allereerst is het goed om te kijken naar momenten, waarin je wist dat je de uitdaging aankon, en ook daadwerkelijk slaagde in wat je moest doen.
     </p>

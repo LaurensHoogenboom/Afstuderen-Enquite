@@ -3,7 +3,7 @@
 ?>
 
 <div class="description">
-    <h1>Een momentje...</h1>
+    <h1>Een momentje... 🎞️</h1>
     <p>
         Omdat te bepalen waarom iets, ondanks je vaardigheden, wel of niet lukt, moeten we deze situaties uitdiepen.
     </p>

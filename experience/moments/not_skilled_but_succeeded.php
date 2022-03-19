@@ -3,7 +3,7 @@
 ?>
                     
 <div class="description">
-    <h1>Onverwacht succesvolle momenten</h1>
+    <h1>Onverwacht succesvolle momenten 😅</h1>
     <p>
         Allereerst zijn daar de momenten waarin je dacht dat je de uitdaging niet aankon, maar je uiteindelijk <i>wel</i> slaagde.
     </p>

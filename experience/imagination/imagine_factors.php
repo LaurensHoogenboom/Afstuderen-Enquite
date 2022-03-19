@@ -3,7 +3,7 @@
 ?>
 
 <div class="description">
-    <h1>Stel je voor dat...</h1>
+    <h1>Stel je voor dat... 🤔</h1>
     <p>
         Invloeden kunnen twee kanten opwerken. Ze kunnen ervoor zorgen dat je, ongeacht je vaardigheden, onzeker bent
         overde situatie, of juist zekerder.

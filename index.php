@@ -3,7 +3,7 @@
 ?>
                
 <div class="description">
-    <h1>Hi! Leuk dat je mee doet met dit onderzoek.</h1>
+    <h1>Hi! Leuk dat je mee doet met dit onderzoek. 📝</h1>
     <p>
         Soms zijn er van die momenten dat je weet dat je iets kan, maar dat het, doordat je bijvoorbeeld zenuwachtig bent, toch niet lukt.
         Als dit veel voorkomt kan dit vervelende gevolgen hebben voor bijvoorbeeld je studie of je sociale contacten.

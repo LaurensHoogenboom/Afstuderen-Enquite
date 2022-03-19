@@ -3,7 +3,7 @@
 ?>
 
 <div class="description">
-    <h1>Ervaringen</h1>
+    <h1>Ervaringen 🎞️</h1>
     <p>
         Momenten ervaar je. Een ervaring bestaat uit wat er gebeurde, je dacht, je voelde en deed. Iets in deze
         ervaring zorgde ervoor dat je jezelf wel of niet zeker voelde over de situatie.

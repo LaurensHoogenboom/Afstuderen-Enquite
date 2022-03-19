@@ -3,7 +3,7 @@
 ?>
                
 <div class="description">
-    <h1>Bijna klaar.</h1>
+    <h1>Bijna klaar. 🎉</h1>
     <p>
         Bedankt dat je deze test wilde maken! Je helpt me hiermee verder met mijn onderzoek.
     </p>

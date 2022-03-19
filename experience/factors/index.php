@@ -3,7 +3,7 @@
 ?>
 
 <div class="description">
-    <h1>Beïnvloed door...</h1>
+    <h1>Beïnvloed door... 🪢</h1>
     <p>
         Nu we hebben opgediept hoe je dacht, voelde of deed in het moment, kunnen we proberen
         te achterhalen waardoor iets onverwacht wel of niet lukte.

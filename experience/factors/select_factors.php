@@ -3,7 +3,7 @@
 ?>
 
 <div class="description">
-    <h1>Beïnvloed door...</h1>
+    <h1>Beïnvloed door... 🪢</h1>
     <p>
         Als mensen erop vertrouwen dat zij hun gedachten, gevoelens en handelen dusdanig kunnen sturen
         dat ze hun taak kunnen uitvoeren, presteren ze vaak beter.

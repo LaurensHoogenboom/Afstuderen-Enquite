@@ -3,7 +3,7 @@
 ?>
                     
 <div class="description">
-    <h1>Minder succesvolle momenten</h1>
+    <h1>Minder succesvolle momenten 😒</h1>
     <p>
         Tenslotte nog de momenten waarin je wist dat je de uitdaging aankon, maar je er toch niet zeker over voelde, en niet slaagde.
     </p>

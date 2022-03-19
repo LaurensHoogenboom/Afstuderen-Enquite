@@ -3,7 +3,7 @@
 ?>
 
 <div class="description">
-    <h1>Laat eens kijken...</h1>
+    <h1>Laat eens kijken... 👀</h1>
     <p>
         We hebben nu een lijst met momenten. Deze moeten we verder uitdiepen, zodat we kunnen bepalen, waarom iets wel of niet lukte.
     </p>
