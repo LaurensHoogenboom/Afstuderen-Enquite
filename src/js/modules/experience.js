@@ -36,7 +36,7 @@ const startExperienceCompletion = () => {
     }
 
     localStorage.setItem('currentExperienceIndex', 0);
-    localStorage.setItem('experienceCount', experiences.length);
+    localStorage.setItem('experienceCount', experiences.length - 1);
 }
 
 const getCurrentExperience = () => {
@@ -60,6 +60,7 @@ const getCurrentExperience = () => {
         }
     } else {
         $('#experience-feeling').prop('selectedIndex',-1);
+        toggleFeelingInput();
     }
 
     $("#experience-index").text(parseInt(currentExperienceIndex) + 1);
@@ -109,9 +110,9 @@ const saveExperience = () => {
 
 //get previous experience
 
-const previousExperience = () => {
+const previousExperience = (save) => {
     const currentExperienceIndex = parseInt(localStorage.getItem('currentExperienceIndex'));
-    saveExperience();
+    save();
 
     //if not first item
     if (currentExperienceIndex !== 0) {
@@ -128,9 +129,9 @@ const previousExperience = () => {
 
 //get next experience
 
-const nextExperience = () => {
+const nextExperience = (save) => {
     //check and save
-    if (saveExperience()) {
+    if (save()) {
         let currentExperienceIndex = parseInt(localStorage.getItem('currentExperienceIndex'));
         let experienceCount = parseInt(localStorage.getItem('experienceCount'));
 
