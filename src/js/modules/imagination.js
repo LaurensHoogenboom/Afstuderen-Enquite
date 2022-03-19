@@ -1,13 +1,13 @@
 
-//start factor inventarisation
+//start experience completion
 
-const loadCurrentFactorInventarisation = () => {
+const loadCurrentImagination = () => {
     let currentExperience = getCurrentExperience();
 
     if (currentExperience.type == "skilled_and_succeeded") {
-        setOptionsVariation(true);
+        setImaginationOptionsVariation(false);
     } else {
-        setOptionsVariation(false);
+        setImaginationOptionsVariation(true);
     }
 
     $('#experience-description').text(currentExperience.description);
@@ -41,30 +41,30 @@ const loadCurrentFactorInventarisation = () => {
     $("#experience-count").text(getExperienceCount());
 }
 
-const setOptionsVariation = (positive = true) => {
+const setImaginationOptionsVariation = (positive = true) => {
     if (positive) {
-        $("option[value=mirror]").html('Ik wist dat iemand anders het gelukt was.');
-        $("option[value=imagination]").html('Ik zag voor me hoe het zou lukken.');
-        $("option[value=physical]").html('Ik was helemaal fit.');
-        $("option[value=mental]").html('Ik was niet druk in mijn hoofd.');
+        $("option[value=mirror]").html('...ik wist dat iemand anders het gelukt was.');
+        $("option[value=imagination]").html('...ik me had voorgesteld hoe het zou kunnen lukken.');
+        $("option[value=physical]").html('...ik helemaal fit was geweest');
+        $("option[value=mental]").html('...ik niet al druk was in mijn hoofd.');
     } else {
-        $("option[value=mirror]").html('Ik wist dat iemand anders het ook niet gelukt was.');
-        $("option[value=imagination]").html('Ik zag voor me hoe het zou mislukken.');
-        $("option[value=physical]").html('Ik was niet helemaal fit.');
-        $("option[value=mental]").html('Ik was al druk in mijn hoofd.');
+        $("option[value=mirror]").html('...ik wist dat iemand anders het niet gelukt was.');
+        $("option[value=imagination]").html('...ik me had voorgesteld hoe het zou kunnen mislukken.');
+        $("option[value=physical]").html('...ik niet helemaal fit was geweest');
+        $("option[value=mental]").html('...ik al druk in mijn hoofd.');
     }
 }
 
-//save factor
+//save imagination
 
-const saveFactorInventarisation = () => {
-    const factor = {
+const saveImagination = () => {
+    const imagination = {
         type: $("#factor-type").val(),
         description: $("#factor-description").val()
     };
 
     if (factor.type) {
-        setExperience(undefined, undefined, undefined, undefined, factor, undefined);
+        setExperience(undefined, undefined, undefined, undefined, undefined, imagination);
         return true;
     } else return false;
 }

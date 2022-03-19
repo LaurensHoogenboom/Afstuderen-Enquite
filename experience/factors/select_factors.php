@@ -53,7 +53,7 @@
 <div class="actions">
     <div class="left">
         <a class="button big" href="/experience/factors/" for="submit_experience_form"
-            onclick="return previousExperience(saveFactorInventarisation, getCurrentFactorInventarisation)">Vorige</a>
+            onclick="return previousExperience(saveFactorInventarisation, loadCurrentFactorInventarisation)">Vorige</a>
     </div>
 
     <div class="middle">
@@ -62,12 +62,12 @@
 
     <div class="right">
         <a class="button big" href="/experience/imagination/" for="submit_experience_form"
-            onclick="return nextExperience(saveFactorInventarisation, getCurrentFactorInventarisation)">Volgende</a>
+            onclick="return nextExperience(saveFactorInventarisation, loadCurrentFactorInventarisation)">Volgende</a>
     </div>
 </div>
 
 <script>
-    getCurrentFactorInventarisation();
+    loadCurrentFactorInventarisation();
 </script>
 
 <?php 

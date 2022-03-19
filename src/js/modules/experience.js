@@ -11,7 +11,7 @@ const createExperienceList = () => {
             type: moment.type,
             action: "",
             feeling: "",
-            thougt: "",
+            thought: "",
             ending: ""
         });
     });
@@ -41,17 +41,15 @@ const startExperienceCompletion = () => {
     }
 
     localStorage.setItem('currentExperienceIndex', 0);
-    localStorage.setItem('experienceCount', experiences.length - 1);
+    localStorage.setItem('experienceCount', experiences.length);
 }
 
-const getCurrentExperience = () => {
-    let experiences = JSON.parse(localStorage.getItem('experienceList'));
-    let currentExperienceIndex = localStorage.getItem('currentExperienceIndex');
-    let currentExperience = experiences[currentExperienceIndex];
+const loadCurrentExperience = () => {
+    const currentExperience = getCurrentExperience();
 
     $('#experience-description').text(currentExperience.description);
     $('#experience-action').val(currentExperience.action);
-    $('#experience-thought').val(currentExperience.thougt);
+    $('#experience-thought').val(currentExperience.thought);
     $('#experience-ending').val(currentExperience.ending);
 
     if (currentExperience.feeling) {
@@ -68,8 +66,8 @@ const getCurrentExperience = () => {
         toggleFeelingInput();
     }
 
-    $("#experience-index").text(parseInt(currentExperienceIndex) + 1);
-    $("#experience-count").text(experiences.length);
+    $("#experience-index").text(getCurrentExperienceIndex() + 1);
+    $("#experience-count").text(getExperienceCount());
 }
 
 //feeling input
@@ -84,15 +82,49 @@ const toggleFeelingInput = () => {
     }
 }
 
-//save experience
+//get experience
 
-const saveExperience = () => {
+const getCurrentExperience = () => {
     const experienceList = JSON.parse(localStorage.getItem('experienceList'));
     const currentExperienceIndex = parseInt(localStorage.getItem('currentExperienceIndex'));
+    return experienceList[currentExperienceIndex];
+}
+
+const getCurrentExperienceIndex = () => {
+    return parseInt(localStorage.getItem('currentExperienceIndex'));
+}
+
+const getExperienceCount = () => {
+    return parseInt(localStorage.getItem('experienceCount'));
+}
+
+const getExperienceList = () => {
+    return JSON.parse(localStorage.getItem('experienceList'))
+}
+
+//set experience
+
+const setExperience = (action, thought, feeling, ending, factor, imaginative_factor) => {
+    const experienceList = getExperienceList();
+    const currentExperienceIndex = getCurrentExperienceIndex();
     const currentExperience = experienceList[currentExperienceIndex];
 
+    currentExperience.action = action !== undefined ? action : currentExperience.action;
+    currentExperience.thought = thought !== undefined ? thought : currentExperience.thought;
+    currentExperience.feeling = feeling !== undefined ? feeling : currentExperience.feeling;
+    currentExperience.ending = ending !== undefined ? ending : currentExperience.ending;
+    currentExperience.factor = factor !== undefined ? factor : currentExperience.factor;
+    currentExperience.imaginative_factor = imaginative_factor !== undefined ? imaginative_factor : currentExperience.imaginative_factor;
+
+    experienceList[currentExperienceIndex] = currentExperience;
+    localStorage.setItem('experienceList', JSON.stringify(experienceList));
+}
+
+//save main experience
+
+const saveExperience = () => {
     const action = $('#experience-action').val();
-    const thougt = $('#experience-thought').val();
+    const thought = $('#experience-thought').val();
     let feeling = $('#experience-feeling').val();
     const ending = $('#experience-ending').val();
 
@@ -100,29 +132,23 @@ const saveExperience = () => {
         feeling = $('#experience-feeling-custom').val();
     }
 
-    if (action && thougt && feeling) {
-        currentExperience.action = action;
-        currentExperience.thougt = thougt;
-        currentExperience.feeling = feeling;
-        currentExperience.ending = ending;
-
-        experienceList[currentExperienceIndex] = currentExperience;
-        localStorage.setItem('experienceList', JSON.stringify(experienceList));
+    if (action && thought && feeling) {
+        setExperience(action, thought, feeling, ending, undefined, undefined, undefined);
         return true;
     } else return false;
 }
 
 //get previous experience
 
-const previousExperience = (set, get) => {
-    const currentExperienceIndex = parseInt(localStorage.getItem('currentExperienceIndex'));
+const previousExperience = (set, load) => {
+    const currentExperienceIndex = getCurrentExperienceIndex();
     set();
 
     //if not first item
     if (currentExperienceIndex !== 0) {
         let previousExperienceIndex = currentExperienceIndex - 1;
         localStorage.setItem('currentExperienceIndex', previousExperienceIndex);
-        get();
+        load();
         hideFormError();
         scrollToFormTop();
 
@@ -132,22 +158,22 @@ const previousExperience = (set, get) => {
 
 //get next experience
 
-const nextExperience = (set, get) => {
+const nextExperience = (set, load) => {
     //check and save
     if (set()) {
-        let currentExperienceIndex = parseInt(localStorage.getItem('currentExperienceIndex'));
-        let experienceCount = parseInt(localStorage.getItem('experienceCount'));
+        let currentExperienceIndex = getCurrentExperienceIndex();
+        let experienceCount = getExperienceCount();
 
         //if last not item
-        if (currentExperienceIndex < experienceCount) {
+        if (currentExperienceIndex + 1 < experienceCount) {
             let nextExperienceIndex = currentExperienceIndex + 1;
             localStorage.setItem('currentExperienceIndex', nextExperienceIndex);
-            get();
+            load();
             hideFormError();
             scrollToFormTop();
 
             return false;
-        } else return true;
+        } else return false;
     } else {
         //not valid
         showFormError("Vul alsjeblieft alle vereiste velden in.");

@@ -6,8 +6,7 @@
     <h1>Stel je voor dat...</h1>
     <p>
         Invloeden kunnen twee kanten opwerken. Ze kunnen ervoor zorgen dat je, ongeacht je vaardigheden, onzeker bent
-        over
-        de situatie, of juist zekerder.
+        overde situatie, of juist zekerder.
     </p>
 </div>
 
@@ -41,7 +40,7 @@
                 <option value="mirror">...ik wist dat iemand anders het gelukt was.</option>
                 <option value="imagination">...ik me had voorgesteld hoe het zou kunnen lukken.</option>
                 <option value="physical">...ik helemaal fit was geweest</option>
-                <option value="mental">...ik was al druk in m'n hoofd.</option>
+                <option value="mental">...ik was al druk in mijn hoofd.</option>
                 <option value="custom">...anders, namelijk...</option>
             </select>
 
@@ -54,7 +53,7 @@
 
 <div class="actions">
     <div class="left">
-        <a class="button big" href="/experience/factors/select_factors.php" for="submit_experience_form" onclick="return previousExperience(saveFactorInventarisation, getCurrentFactorInventarisation)">Vorige</a>
+        <a class="button big" href="/experience/factors/select_factors.php" for="submit_experience_form" onclick="return previousExperience(saveImagination, loadCurrentImagination)">Vorige</a>
     </div>
 
     <div class="middle">
@@ -62,12 +61,12 @@
     </div>
 
     <div class="right">
-        <a class="button big" href="/experience/imagination/" for="submit_experience_form" onclick="return nextExperience(saveFactorInventarisation, getCurrentFactorInventarisation)">Volgende</a>
+        <a class="button big" href="/experience/imagination/" for="submit_experience_form" onclick="return nextExperience(saveImagination, loadCurrentImagination)">Volgende</a>
     </div>
 </div>
 
 <script>
-    getCurrentFactorInventarisation();
+    loadCurrentImagination();
 </script>
 
 <?php 
