@@ -51,7 +51,7 @@ form label.block {
     background-color: rgb(220,220,220);
     padding: 10px 20px;
     border-radius: 10px;
-    margin-top: -15px;
+    margin: 0px 0px 15px 0px;
 }
 
 form label.block.hidden {
@@ -275,16 +275,6 @@ a.button {
     padding-bottom: 20px;
     margin-bottom: 20px;
     border-bottom: 1px solid rgb(220,220,220);
-}
-
-/*factors*/
-
-.influence-input-label {
-    padding-bottom: 5px;
-}
-
-.influence-textarea {
-    margin-bottom: 5px;
 }
 
 

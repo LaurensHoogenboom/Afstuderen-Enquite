@@ -18,57 +18,43 @@
 
             <label class="form-status hidden"></label>
 
-            <p class="no-line">
-                <span>Als in deze siutatie...</span>
-                <br>
+            <label>In dit moment...</label>
+            <label id="experience-description" class="block"></label>
 
-                <span id="experience-description" class="block"></span>
-                <br>
+            <label>...en ik hierdoor werdt beïnvloed:</label>
+            <label id="experience-factor" class="block"></label>
 
-                <span>...waarbij ik hierdoor werd beïnvloed:</span>
-                <br>
+            <label>...zdoat ik dit dacht:</label>
+            <label id="experience-thought" class="block"></label>
 
-                <span id="experience-factor" class="block"></span>
-                <br>
+            <label>...en me zo voelde:</label>
+            <label id="experience-feeling" class="block"></label>
 
-                <span>...en dit dacht:</span>
-                <br>
+            <label>...en dit deed:</label>
+            <label id="experience-action" class="block"></label>
 
-                <span id="experience-thought" class="block"></span>
-                <br>
+            <label class="influence-input-label">...had anders kunnen verlopen als ik: *</label>
 
-                <span>...en me daardoor zo voelde:</span>
-                <br>
+            <select id="factor-type">
+                <option value="experience">...een eerdere ervaring had gehad met een vergelijkbare situatie.</option>
+                <option value="feedback">...iemand iets had gezegd, namelijk...</option>
+                <option value="mirror">...ik wist dat iemand anders het gelukt was.</option>
+                <option value="imagination">...ik me had voorgesteld hoe het zou kunnen lukken.</option>
+                <option value="physical">...ik helemaal fit was geweest</option>
+                <option value="mental">...ik was al druk in m'n hoofd.</option>
+                <option value="custom">...anders, namelijk...</option>
+            </select>
 
-                <span id="experience-feeling" class="block"></span>
-                <br>
-
-                <span>...maar dit was gebeurd:</span>
-                <br>
-
-                <select id="factor-type">
-                    <option value="experience">Een eerdere ervaring met een vergelijkbare situatie.</option>
-                    <option value="feedback">Iemand zij iets, namelijk...</option>
-                    <option value="mirror">Ik wist dat iemand anders het <span id="mirror"></span> gelukt was.</option>
-                    <option value="imagination">Ik zag voor me hoe het <span id="imagination"></span> zou lukken.
-                    </option>
-                    <option value="fysical">Ik was <span id="physical"></span> helemaal fit.</option>
-                    <option value="mental">Ik was <span id="mental"></span> al druk in m'n hoofd.</option>
-                    <option value="custom">Anders, namelijk...</option>
-                </select>
-
-                <textarea id="factor-description"></textarea>
-
-                <span>Dan had ik meer vertrouwen in de situatie gehad, en was deze mogelijk anders verlopen.</span>
-            </p>
+            <textarea id="factor-description" class="influence-textarea" placeholder="licht eventueel toe"></textarea>
         </div>
+
         <label>* verplicht veld</label>
     </form>
 </div>
 
 <div class="actions">
     <div class="left">
-        <a class="button big" href="/experience/factors/" for="submit_experience_form" onclick="return previousExperience(saveFactorInventarisation, getCurrentFactorInventarisation)">Vorige</a>
+        <a class="button big" href="/experience/factors/select_factors.php" for="submit_experience_form" onclick="return previousExperience(saveFactorInventarisation, getCurrentFactorInventarisation)">Vorige</a>
     </div>
 
     <div class="middle">

@@ -17,34 +17,19 @@
 
             <label class="form-status hidden"></label>
 
-
             <label>In dit moment...</label>
-            <br>
-
             <label id="experience-description" class="block"></label>
-            <br>
 
             <label>...waarbij ik dit dacht:</label>
-            <br>
-
             <label id="experience-thought" class="block"></label>
-            <br>
 
             <label>...en me zo voelde:</label>
-            <br>
-
             <label id="experience-feeling" class="block"></label>
-            <br>
 
             <label>...en dit deed:</label>
-            <br>
-
             <label id="experience-action" class="block"></label>
-            <br>
 
-            <label class="influence-input-label">...werdt ik beïnvloed door: *</label>
-            <br>
-
+            <label class="influence-input-label">...werd ik beïnvloed door: *</label>
             <select id="factor-type">
                 <option value="experience">Een eerdere ervaring met een vergelijkbare situatie.</option>
                 <option value="feedback">Iemand zij iets, namelijk...</option>
@@ -56,11 +41,8 @@
             </select>
 
             <textarea id="factor-description" class="influence-textarea" placeholder="licht eventueel toe"></textarea>
-            <br>
 
             <label id="experience-ending-caption">...met als gevolg dat:</label>
-            <br>
-
             <label id="experience-ending" class="block"></label>
         </div>
 
