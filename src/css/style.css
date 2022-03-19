@@ -143,6 +143,24 @@ main {
     overflow: hidden;
 }
 
+.illustration {
+    position: absolute;
+    width: 300px;
+    max-width: 100%;
+    left: 50px;
+    bottom: -20px;
+    z-index: 1;
+}
+
+.floor {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(245,245,245);
+}
 
 #form-wrapper {
     background-color: white;
