@@ -24,7 +24,7 @@
     </div>
 
     <div class="middle">
-        <a class="button big" onclick="saveResult()">Verzenden</a>
+        <a class="button big" href="https://laureato.nl/"  onclick="saveResult()">Verzenden</a>
     </div>
 
     <div class="right">

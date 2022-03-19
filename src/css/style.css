@@ -227,6 +227,13 @@ a.button {
     pointer-events: none;
 }
 
+.button.remove {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    padding: 0;
+}
+
 /*moment list*/
 
 .moment-list, .moment-list .list, .moment-select-list {
