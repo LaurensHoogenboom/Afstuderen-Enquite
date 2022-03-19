@@ -15,6 +15,8 @@
         <div class="item">
             <h2>Moment <span id="experience-index"></span> van <span id="experience-count"></span></h2>
 
+            <label id="moment-type"></label>
+
             <p id="experience-description">moment beschrijving</p>
 
             <label class="form-status hidden"></label>
@@ -29,6 +31,7 @@
                 <option value="afraid">Bang</option>
                 <option value="angry">Boos</option>
                 <option value="sad">Bedroefd</option>
+                <option value="ashamed">Beschaamd</option>
                 <option value="custom">Anders, namelijk...</option>
             </select>
 
@@ -37,7 +40,7 @@
             <label>Wat was jouw rol in dit moment? *</label>
             <textarea id="experience-action" required></textarea>
 
-            <label>Hoe eindigde het?</label>
+            <label>Hoe eindigde het, en voelde je erna?</label>
             <textarea id="experience-ending"></textarea>
         </div>
         <label>* verplicht veld</label>

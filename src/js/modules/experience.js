@@ -35,10 +35,8 @@ const getEmotionText = (emotion) => {
 const startExperienceCompletion = () => {
     let experiences = JSON.parse(localStorage.getItem('experienceList'));
 
-    if (!experiences) {
-        createExperienceList();
-        experiences = JSON.parse(localStorage.getItem('experienceList'));
-    }
+    createExperienceList();
+    experiences = JSON.parse(localStorage.getItem('experienceList'));
 
     localStorage.setItem('currentExperienceIndex', 0);
     localStorage.setItem('experienceCount', experiences.length);
@@ -51,6 +49,7 @@ const loadCurrentExperience = () => {
     $('#experience-action').val(currentExperience.action);
     $('#experience-thought').val(currentExperience.thought);
     $('#experience-ending').val(currentExperience.ending);
+    $('#moment-type').text(getMomentTypeText(currentExperience.type));
 
     if (currentExperience.feeling) {
         if (emotionIsCustom(currentExperience.feeling)) {
@@ -62,7 +61,7 @@ const loadCurrentExperience = () => {
             toggleFeelingInput();
         }
     } else {
-        $('#experience-feeling').prop('selectedIndex',-1);
+        $('#experience-feeling').prop('selectedIndex', -1);
         toggleFeelingInput();
     }
 

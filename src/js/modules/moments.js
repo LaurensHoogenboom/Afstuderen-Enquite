@@ -187,8 +187,7 @@ const getMomentsInSelectList = (list) => {
     }
 }
 
-//create complete momentlist
-//used when no selection is available
+//create list with all moments
 
 const createCompleteMomentList = () => {
     const moments = [];
@@ -206,4 +205,10 @@ const createCompleteMomentList = () => {
     });
 
     localStorage.setItem('selectedMoments', JSON.stringify(moments));
+}
+
+//get momenttype text
+
+const getMomentTypeText = (type) => {
+    return momentTypeText.find(text => text.type == type).dutch;
 }

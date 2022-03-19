@@ -1,6 +1,7 @@
 //types
 const momentTypes = ["skilled_and_succeeded", "not_skilled_but_succeeded", "skilled_but_failed"];
-const emotionTypes = ["happy", "angry", "sad", "afraid"];
+const emotionTypes = ["happy", "angry", "sad", "afraid", "ashamed"];
+const factorTypes = ["experience", "feedback", "mirror", "imagination", "mental"];
 
 const emotionText = [
     {
@@ -19,20 +20,26 @@ const emotionText = [
         type: "afraid",
         dutch: "Bang"
     },
+    {
+        type: "ashamed",
+        dutch: "Beschaamd"
+    }
 ]
 
-const factorTypes = ["experience", "feedback", "mirror", "imagination", "mental"];
-
-/*
-experience = {
-    id: makeid(6),
-    description: moment,
-    action: "",
-    feeling: "",
-    thougt: "",
-    ending: ""
-}
-*/
+const momentTypeText = [
+    {
+        type: "skilled_and_succeeded",
+        dutch: "Je was zeker van jezelf, en het lukte."
+    },
+    {
+        type: "not_skilled_but_succeeded",
+        dutch: "Je was niet zeker van jezelf, maar het lukte toch."
+    },
+    {
+        type: "skilled_but_failed",
+        dutch: "Je was niet zeker van jezelf, en het lukte niet."
+    }
+]
 
 //initialize
 

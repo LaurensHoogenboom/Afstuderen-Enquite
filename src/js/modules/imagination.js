@@ -5,7 +5,7 @@ const loadCurrentImagination = () => {
     const currentExperience = getCurrentExperience();
     const factor = currentExperience.factor;
 
-    if (currentExperience.type == "skilled_and_succeeded") {
+    if (currentExperience.type == "skilled_and_succeeded" || currentExperience.type == "not_skilled_but_succeeded") {
         setImaginationOptionsVariation(false);
     } else {
         setImaginationOptionsVariation(true);
@@ -14,6 +14,7 @@ const loadCurrentImagination = () => {
     $('#experience-description').text(currentExperience.description);
     $('#experience-action').text(currentExperience.action);
     $('#experience-thought').text(currentExperience.thought);
+    $('#moment-type').text(getMomentTypeText(currentExperience.type));
 
     if (emotionIsCustom(currentExperience.feeling)) {
         $('#experience-feeling').text(currentExperience.feeling);

@@ -20,7 +20,7 @@
 /*text*/
 
 p, h1, h2, h3, button, input, label, a, i, textarea, input[type="number"], select {
-    font-family: sans-serif;
+    font-family: "Arial";
     color: rgb(51,51,51);
 }
 
@@ -162,6 +162,15 @@ main {
     background-color: rgb(245,245,245);
 }
 
+@media only screen and (max-width: 1000px) {
+    .illustration {
+        display: none;
+    }
+    .floor {
+        display: none;
+    }
+}
+
 #form-wrapper {
     background-color: white;
     border-radius: 10px;
@@ -171,6 +180,7 @@ main {
     border: 1px solid var(--border-color);
     max-height: calc(var(--vh, 1vh) * 100 - 100px);
     overflow: auto;
+    z-index: 2;
 }
 
 #form-wrapper .description {
@@ -313,4 +323,9 @@ a.button {
     padding-bottom: 20px;
     margin-bottom: 20px;
     border-bottom: 1px solid var(--border-color);
+}
+
+@font-face {
+    font-family: "Arial";
+    src: url(/src/fonts/Arial.woff);
 }

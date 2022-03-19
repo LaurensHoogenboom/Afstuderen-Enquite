@@ -15,6 +15,8 @@
         <div class="item">
             <h2>Moment <span id="experience-index"></span> van <span id="experience-count"></span></h2>
 
+            <label id="moment-type"></label>
+
             <label class="form-status hidden"></label>
 
             <label>In dit moment...</label>

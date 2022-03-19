@@ -13,6 +13,7 @@ const loadCurrentFactorInventarisation = () => {
     $('#experience-description').text(currentExperience.description);
     $('#experience-action').text(currentExperience.action);
     $('#experience-thought').text(currentExperience.thought);
+    $('#moment-type').text(getMomentTypeText(currentExperience.type));
 
     if (emotionIsCustom(currentExperience.feeling)) {
         $('#experience-feeling').text(currentExperience.feeling);
@@ -69,7 +70,7 @@ const getFactorText = (type, positive) => {
         case "experience":
             return "Een eerdere ervaring met een vergelijkbare situatie."
         case "feedback":
-            return "Iemand zij iets, namelijk..."
+            return "Iemand zei iets, namelijk..."
         case "mirror":
             if (positive) {
                 return "Ik wist dat iemand anders het gelukt was."

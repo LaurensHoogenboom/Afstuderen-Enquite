@@ -15,6 +15,8 @@
         <div class="item">
             <h2>Moment <span id="experience-index"></span> van <span id="experience-count"></span></h2>
 
+            <label id="moment-type"></label>
+
             <label class="form-status hidden"></label>
 
             <label>In dit moment...</label>
@@ -32,10 +34,10 @@
             <label>...en dit deed:</label>
             <label id="experience-action" class="block"></label>
 
-            <label>...had anders kunnen verlopen als ik: *</label>
+            <label>...had anders kunnen verlopen als: *</label>
 
             <select id="imaginative_factor-type">
-                <option value="experience">...een eerdere ervaring had gehad met een vergelijkbare situatie.</option>
+                <option value="experience">...ik een eerdere ervaring had gehad met een vergelijkbare situatie.</option>
                 <option value="feedback">...iemand iets had gezegd, namelijk...</option>
                 <option value="mirror">...ik wist dat iemand anders het gelukt was.</option>
                 <option value="imagination">...ik me had voorgesteld hoe het zou kunnen lukken.</option>
