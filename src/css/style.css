@@ -67,6 +67,7 @@ textarea, input[type="number"], select {
     border: 1px solid rgb(220,220,220);
     padding: 10px 20px;
     resize: vertical;
+    background-color: white;
 }
 
 textarea {

@@ -72,8 +72,6 @@ const saveImagination = () => {
         description: $("#imaginative_factor-textarea").val()
     };
 
-    console.log(imagination.description)
-
     if (imagination.type) {
         setExperience(undefined, undefined, undefined, undefined, undefined, imagination);
         return true;

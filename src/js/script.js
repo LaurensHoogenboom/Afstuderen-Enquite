@@ -37,7 +37,7 @@ experience = {
 //initialize
 
 const initialize = () => {
-    localStorage.clear();
+    cleanData();
 
     momentTypes.forEach(type => {
         list = [];
@@ -79,8 +79,6 @@ const getBool = (string) => {
     return string == 'true' ? true : false;
 }
 
-//clean
-
 const cleanData = () => {
     localStorage.clear();
 }
@@ -88,27 +86,14 @@ const cleanData = () => {
 //save result
 
 const saveResult = () => {
-    const personalStrengthList = JSON.parse(localStorage.getItem('personalStrengthList'));
-    const experiences = JSON.parse(localStorage.getItem('experienceList'));
-    const saveExtensiveData = $('#shareData').is(':checked');
-
-    const valutionList = [];
-
-    personalStrengthList.forEach(personalStrength => {
-        valutionList.push({
-            wantedToBeUsed: personalStrength.wantedToBeUsed,
-            usedRegularly: personalStrength.usedRegularly,
-            grade: personalStrength.grade,
-            remarks: personalStrength.remarks
-        });
-    });
+    const experienceList = getExperienceList();
 
     const result = {
-        valuationList: valutionList,
-        experienceList: saveExtensiveData ? experiences : null,
-        personalStrengthList: saveExtensiveData ? personalStrengthList : null,
+        experienceList: experienceList,
         feedback: $("#feedback").val()
     }
+
+    console.log(experienceList);
 
     $.ajax({
         url: '/src/php/save.php',

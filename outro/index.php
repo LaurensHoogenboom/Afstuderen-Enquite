@@ -5,18 +5,17 @@
 <div class="description">
     <h1>Bijna klaar.</h1>
     <p>
-        Bedankt!
+        Bedankt dat je deze test wilde maken! Je helpt me hiermee verder met mijn onderzoek.
     </p>
     <p>
-        <i>
-            Toch nog niet helemaal zeker over de sterke punten die je hebt omschreven? 
-            Je kunt ze nog <a href="/personal_strengths/add_details.php" onclick="firstPersonalStrength()">aanpassen</a>.
-        </i>
+        Mocht je nog vragen of opmerkingen hebben over deze test, dan kan je ze hieronder achterlaten.
     </p>
 </div>
 
 <div class="content">
-    
+    <form>
+        <textarea id="feedback"></textarea>
+    </form>
 </div>
 
 <div class="actions">
@@ -25,7 +24,7 @@
     </div>
 
     <div class="middle">
-        <a class="button big" href="/outro/valuation.php" onclick="startValuation()">Start</a>
+        <a class="button big" onclick="saveResult()">Verzenden</a>
     </div>
 
     <div class="right">

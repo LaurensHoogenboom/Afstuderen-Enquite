@@ -23,7 +23,7 @@
             <label>...en ik hierdoor werdt beïnvloed:</label>
             <label id="experience-factor" class="block"></label>
 
-            <label>...zdoat ik dit dacht:</label>
+            <label>...zodat ik dit dacht:</label>
             <label id="experience-thought" class="block"></label>
 
             <label>...en me zo voelde:</label>
