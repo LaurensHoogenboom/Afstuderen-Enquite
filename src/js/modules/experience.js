@@ -173,7 +173,7 @@ const nextExperience = (set, load) => {
             scrollToFormTop();
 
             return false;
-        } else return false;
+        } else return true;
     } else {
         //not valid
         showFormError("Vul alsjeblieft alle vereiste velden in.");
