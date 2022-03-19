@@ -2,7 +2,8 @@
 //start experience completion
 
 const loadCurrentImagination = () => {
-    let currentExperience = getCurrentExperience();
+    const currentExperience = getCurrentExperience();
+    const factor = currentExperience.factor;
 
     if (currentExperience.type == "skilled_and_succeeded") {
         setImaginationOptionsVariation(false);
@@ -21,20 +22,28 @@ const loadCurrentImagination = () => {
         $('#experience-feeling').text(emotionText);
     }
 
-    if (currentExperience.ending) {
-        $("#experience-ending").removeClass("hidden").text(currentExperience.ending);
-        $("#experience-ending-caption").removeClass("hidden");
+    if (factorIsCustom(factor.type)) {
+        const factorText = factor.description;
+        $("#experience-factor").text(factorText);
     } else {
-        $("#experience-ending").addClass("hidden");
-        $("#experience-ending-caption").addClass("hidden");
+        const positive = factor.type == "skilled_and_succeeded" ? true : false;
+        let factorText = ""
+
+        if (factor.text) {
+            factorText = `${getFactorText(factor.type, positive).slice(0, -1)}: ${factor.description}`
+        } else {
+            factorText = `${getFactorText(factor.type, positive)}`
+        }
+
+        $("#experience-factor").text(factorText);
     }
 
-    if (currentExperience.factor) {
-        $('#factor-type').val(currentExperience.factor.type);
-        $('#factor-description').val(currentExperience.factor.description);
+    if (currentExperience.imaginative_factor) {
+        $('#imaginative_factor-type').val(currentExperience.imaginative_factor.type);
+        $('#imaginative_factor-textarea').val(currentExperience.imaginative_factor.description);
     } else {
-        $('#factor-type').prop('selectedIndex',-1);
-        $('#factor-description').val("");
+        $('#imaginative_factor-type').prop('selectedIndex',-1);
+        $('#imaginative_factor-textarea').val("");
     }
 
     $("#experience-index").text(getCurrentExperienceIndex() + 1);
@@ -59,11 +68,13 @@ const setImaginationOptionsVariation = (positive = true) => {
 
 const saveImagination = () => {
     const imagination = {
-        type: $("#factor-type").val(),
-        description: $("#factor-description").val()
+        type: $("#imaginative_factor-type").val(),
+        description: $("#imaginative_factor-textarea").val()
     };
 
-    if (factor.type) {
+    console.log(imagination.description)
+
+    if (imagination.type) {
         setExperience(undefined, undefined, undefined, undefined, undefined, imagination);
         return true;
     } else return false;

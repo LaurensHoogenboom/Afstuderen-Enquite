@@ -33,7 +33,7 @@ const loadCurrentFactorInventarisation = () => {
         $('#factor-type').val(currentExperience.factor.type);
         $('#factor-description').val(currentExperience.factor.description);
     } else {
-        $('#factor-type').prop('selectedIndex',-1);
+        $('#factor-type').prop('selectedIndex', -1);
         $('#factor-description').val("");
     }
 
@@ -42,17 +42,10 @@ const loadCurrentFactorInventarisation = () => {
 }
 
 const setOptionsVariation = (positive = true) => {
-    if (positive) {
-        $("option[value=mirror]").html('Ik wist dat iemand anders het gelukt was.');
-        $("option[value=imagination]").html('Ik zag voor me hoe het zou lukken.');
-        $("option[value=physical]").html('Ik was helemaal fit.');
-        $("option[value=mental]").html('Ik was niet druk in mijn hoofd.');
-    } else {
-        $("option[value=mirror]").html('Ik wist dat iemand anders het ook niet gelukt was.');
-        $("option[value=imagination]").html('Ik zag voor me hoe het zou mislukken.');
-        $("option[value=physical]").html('Ik was niet helemaal fit.');
-        $("option[value=mental]").html('Ik was al druk in mijn hoofd.');
-    }
+    $("option[value=mirror]").html(getFactorText("mirror", positive));
+    $("option[value=imagination]").html(getFactorText("imagination", positive));
+    $("option[value=physical]").html(getFactorText("physical", positive));
+    $("option[value=mental]").html(getFactorText("mental", positive));
 }
 
 //save factor
@@ -67,4 +60,43 @@ const saveFactorInventarisation = () => {
         setExperience(undefined, undefined, undefined, undefined, factor, undefined);
         return true;
     } else return false;
+}
+
+//global
+
+const getFactorText = (type, positive) => {
+    switch (type) {
+        case "experience":
+            return "Een eerdere ervaring met een vergelijkbare situatie."
+        case "feedback":
+            return "Iemand zij iets, namelijk..."
+        case "mirror":
+            if (positive) {
+                return "Ik wist dat iemand anders het gelukt was."
+            } else {
+                return "Ik wist dat iemand anders het ook niet gelukt was."
+            }
+        case "imagination":
+            if (positive) {
+                return "Ik zag voor me hoe het zou lukken."
+            } else {
+                return "Ik zag voor me hoe het zou mislukken."
+            }
+        case "physical":
+            if (positive) {
+                return "Ik was helemaal fit."
+            } else {
+                return "Ik was niet helemaal fit."
+            }
+        case "mental":
+            if (positive) {
+                return "Ik was niet druk in mijn hoofd."
+            } else {
+                return "Ik was al druk in mijn hoofd."
+            }
+    }
+}
+
+const factorIsCustom = (factor) => {
+    return !factorTypes.includes(factor);
 }

@@ -29,7 +29,7 @@
             <label>...en dit deed:</label>
             <label id="experience-action" class="block"></label>
 
-            <label class="influence-input-label">...werd ik beïnvloed door: *</label>
+            <label>...werd ik beïnvloed door: *</label>
             <select id="factor-type">
                 <option value="experience">Een eerdere ervaring met een vergelijkbare situatie.</option>
                 <option value="feedback">Iemand zij iets, namelijk...</option>
@@ -40,7 +40,7 @@
                 <option value="custom">Anders, namelijk...</option>
             </select>
 
-            <textarea id="factor-description" class="influence-textarea" placeholder="licht eventueel toe"></textarea>
+            <textarea id="factor-description" placeholder="licht eventueel toe"></textarea>
 
             <label id="experience-ending-caption">...met als gevolg dat:</label>
             <label id="experience-ending" class="block"></label>

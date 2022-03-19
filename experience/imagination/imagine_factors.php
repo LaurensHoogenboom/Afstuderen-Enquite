@@ -32,9 +32,9 @@
             <label>...en dit deed:</label>
             <label id="experience-action" class="block"></label>
 
-            <label class="influence-input-label">...had anders kunnen verlopen als ik: *</label>
+            <label>...had anders kunnen verlopen als ik: *</label>
 
-            <select id="factor-type">
+            <select id="imaginative_factor-type">
                 <option value="experience">...een eerdere ervaring had gehad met een vergelijkbare situatie.</option>
                 <option value="feedback">...iemand iets had gezegd, namelijk...</option>
                 <option value="mirror">...ik wist dat iemand anders het gelukt was.</option>
@@ -44,7 +44,7 @@
                 <option value="custom">...anders, namelijk...</option>
             </select>
 
-            <textarea id="factor-description" class="influence-textarea" placeholder="licht eventueel toe"></textarea>
+            <textarea id="imaginative_factor-textarea" placeholder="licht eventueel toe"></textarea>
         </div>
 
         <label>* verplicht veld</label>
@@ -53,7 +53,7 @@
 
 <div class="actions">
     <div class="left">
-        <a class="button big" href="/experience/factors/select_factors.php" for="submit_experience_form" onclick="return previousExperience(saveImagination, loadCurrentImagination)">Vorige</a>
+        <a class="button big"  for="submit_experience_form" onclick="return previousExperience(saveImagination, loadCurrentImagination)">Vorige</a>
     </div>
 
     <div class="middle">
@@ -61,7 +61,7 @@
     </div>
 
     <div class="right">
-        <a class="button big" href="/experience/imagination/" for="submit_experience_form" onclick="return nextExperience(saveImagination, loadCurrentImagination)">Volgende</a>
+        <a class="button big"  for="submit_experience_form" onclick="return nextExperience(saveImagination, loadCurrentImagination)">Volgende</a>
     </div>
 </div>
 

@@ -21,6 +21,8 @@ const emotionText = [
     },
 ]
 
+const factorTypes = ["experience", "feedback", "mirror", "imagination", "mental"];
+
 /*
 experience = {
     id: makeid(6),
@@ -105,14 +107,14 @@ const saveResult = () => {
         valuationList: valutionList,
         experienceList: saveExtensiveData ? experiences : null,
         personalStrengthList: saveExtensiveData ? personalStrengthList : null,
-        feedback: $("#feedback").val() 
+        feedback: $("#feedback").val()
     }
 
     $.ajax({
         url: '/src/php/save.php',
         method: 'POST',
-        data: {data: JSON.stringify(result)}
-    }).done(function(response) {
+        data: { data: JSON.stringify(result) }
+    }).done(function (response) {
         console.log(response);
     });
 
