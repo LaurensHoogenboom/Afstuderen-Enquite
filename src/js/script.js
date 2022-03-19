@@ -2,6 +2,25 @@
 const momentTypes = ["skilled_and_succeeded", "not_skilled_but_succeeded", "skilled_but_failed"];
 const emotionTypes = ["happy", "angry", "sad", "afraid"];
 
+const emotionText = [
+    {
+        type: "happy",
+        dutch: "Blij"
+    },
+    {
+        type: "angry",
+        dutch: "Boos"
+    },
+    {
+        type: "sad",
+        dutch: "Verdrietig"
+    },
+    {
+        type: "afraid",
+        dutch: "Bang"
+    },
+]
+
 /*
 experience = {
     id: makeid(6),

@@ -24,13 +24,32 @@ const getCurrentFactorInventarisation = () => {
     }
 
     $('#experience-description').text(currentExperience.description);
-    $('#experience-action').val(currentExperience.action);
-    $('#experience-thought').val(currentExperience.thougt);
+    $('#experience-action').text(currentExperience.action);
+    $('#experience-thought').text(currentExperience.thougt);
+
+    if (emotionIsCustom(currentExperience.feeling)) {
+        $('#experience-feeling').text(currentExperience.feeling);
+    } else {
+        const emotionText = getEmotionText(currentExperience.feeling);
+        $('#experience-feeling').text(emotionText);
+    }
 
     if (currentExperience.ending) {
         $("#experience-ending").removeClass("hidden").text(currentExperience.ending);
+        $("#experience-ending-caption").removeClass("hidden");
     } else {
-        $("#experience-ending").addClass("hidden")
+        $("#experience-ending").addClass("hidden");
+        $("#experience-ending-caption").addClass("hidden");
+    }
+
+    console.log(currentExperience.factor);
+
+    if (currentExperience.factor) {
+        $('#factor-type').val(currentExperience.factor.type);
+        $('#factor-description').val(currentExperience.factor.description);
+    } else {
+        $('#factor-type').prop('selectedIndex',-1);
+        $('#factor-description').val("");
     }
 
     $("#experience-index").text(parseInt(currentExperienceIndex) + 1);
@@ -50,27 +69,20 @@ const setOptionsVariation = (mirror, imagination, physical, mental) => {
     $("#mental").text(mental);
 }
 
-//save experience
+//save factor
 
 const saveFactorInventarisation = () => {
     const experienceList = JSON.parse(localStorage.getItem('experienceList'));
     const currentExperienceIndex = parseInt(localStorage.getItem('currentExperienceIndex'));
     const currentExperience = experienceList[currentExperienceIndex];
 
-    const action = $('#experience-action').val();
-    const thougt = $('#experience-thought').val();
-    let feeling = $('#experience-feeling').val();
-    const ending = $('#experience-ending').val();
+    const factor = {
+        type: $("#factor-type").val(),
+        description: $("#factor-description").val()
+    };
 
-    if (emotionIsCustom(feeling)) {
-        feeling = $('#experience-feeling-custom').val();
-    }
-
-    if (action && thougt && feeling) {
-        currentExperience.action = action;
-        currentExperience.thougt = thougt;
-        currentExperience.feeling = feeling;
-        currentExperience.ending = ending;
+    if (factor.type) {
+        currentExperience.factor = factor;
 
         experienceList[currentExperienceIndex] = currentExperience;
         localStorage.setItem('experienceList', JSON.stringify(experienceList));

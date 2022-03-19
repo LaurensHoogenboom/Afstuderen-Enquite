@@ -25,6 +25,22 @@ h1, h2 {
     padding-bottom: 15px;
 }
 
+p span.block {
+    display: inline-block;
+    background-color: rgb(220,220,220);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 10px 10px 20px 0;
+}
+
+p span.block.hidden {
+    display: none;
+}
+
+p span.block:last-child {
+    margin-bottom: 0;
+}
+
 /*form*/
 
 form label {

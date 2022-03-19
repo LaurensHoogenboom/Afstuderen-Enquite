@@ -19,10 +19,15 @@ const createExperienceList = () => {
     localStorage.setItem('experienceList', JSON.stringify(experiences));
 }
 
-//check if emotion is customized
+//emotion functions
 
 const emotionIsCustom = (emotion) => {
     return !emotionTypes.includes(emotion);
+}
+
+const getEmotionText = (emotion) => {
+    const emotionObj = emotionText.find(em => em.type == emotion);
+    return emotionObj.dutch;
 }
 
 //start experience completion
@@ -91,7 +96,6 @@ const saveExperience = () => {
     let feeling = $('#experience-feeling').val();
     const ending = $('#experience-ending').val();
 
-    
     if (emotionIsCustom(feeling)) {
         feeling = $('#experience-feeling-custom').val();
     }
@@ -110,16 +114,15 @@ const saveExperience = () => {
 
 //get previous experience
 
-const previousExperience = (save) => {
+const previousExperience = (set, get) => {
     const currentExperienceIndex = parseInt(localStorage.getItem('currentExperienceIndex'));
-    save();
+    set();
 
     //if not first item
     if (currentExperienceIndex !== 0) {
         let previousExperienceIndex = currentExperienceIndex - 1;
         localStorage.setItem('currentExperienceIndex', previousExperienceIndex);
-        getCurrentExperience();
-
+        get();
         hideFormError();
         scrollToFormTop();
 
@@ -129,9 +132,9 @@ const previousExperience = (save) => {
 
 //get next experience
 
-const nextExperience = (save) => {
+const nextExperience = (set, get) => {
     //check and save
-    if (save()) {
+    if (set()) {
         let currentExperienceIndex = parseInt(localStorage.getItem('currentExperienceIndex'));
         let experienceCount = parseInt(localStorage.getItem('experienceCount'));
 
@@ -139,8 +142,7 @@ const nextExperience = (save) => {
         if (currentExperienceIndex < experienceCount) {
             let nextExperienceIndex = currentExperienceIndex + 1;
             localStorage.setItem('currentExperienceIndex', nextExperienceIndex);
-            getCurrentExperience();
-
+            get();
             hideFormError();
             scrollToFormTop();
 
