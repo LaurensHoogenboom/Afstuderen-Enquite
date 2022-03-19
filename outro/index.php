@@ -5,8 +5,7 @@
 <div class="description">
     <h1>Bijna klaar.</h1>
     <p>
-        We zijn bijna zover. Hopelijk heb je door middel van deze vragenlijst een aantal sterke punten van jezelf
-        weten te benoemen. Nu volgt de belangrijkste stap voor het onderzoek: jouw beoordeling van de resultaten.
+        Bedankt!
     </p>
     <p>
         <i>

@@ -53,7 +53,7 @@
 
 <div class="actions">
     <div class="left">
-        <a class="button big"  for="submit_experience_form" onclick="return previousExperience(saveImagination, loadCurrentImagination)">Vorige</a>
+        <a class="button big" href="/experience/factors/select_factors.php" for="submit_experience_form" onclick="return previousExperience(saveImagination, loadCurrentImagination)">Vorige</a>
     </div>
 
     <div class="middle">
@@ -61,7 +61,7 @@
     </div>
 
     <div class="right">
-        <a class="button big"  for="submit_experience_form" onclick="return nextExperience(saveImagination, loadCurrentImagination)">Volgende</a>
+        <a class="button big" href="/outro/" for="submit_experience_form" onclick="return nextExperience(saveImagination, loadCurrentImagination)">Volgende</a>
     </div>
 </div>
 
