@@ -16,9 +16,6 @@
 </div>
 
 <div class="content">
-    <script>
-        createCompleteMomentList();
-    </script>
 </div>
 
 <div class="actions">

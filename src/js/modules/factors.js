@@ -11,15 +11,15 @@ const getCurrentFactorInventarisation = () => {
     switch(type) {
         case "skilled_and_succeeded":
             setDescriptionVariation("", "en", "daadwerkelijk");
-            setOptionsVariation("ook", "", "", "niet");
+            setOptionsVariation();
             break;
         case "not_skilled_but_succeeded":
             setDescriptionVariation("niet", "maar", "toch");
-            setOptionsVariation("ook niet", "me niet", "niet", "");
+            setOptionsVariation(false);
             break;
         case "skilled_but_failed":
             setDescriptionVariation("niet", "en", "niet");
-            setOptionsVariation("ook niet", "me niet", "niet", "");
+            setOptionsVariation(false);
             break;
     }
 
@@ -42,8 +42,6 @@ const getCurrentFactorInventarisation = () => {
         $("#experience-ending-caption").addClass("hidden");
     }
 
-    console.log(currentExperience.factor);
-
     if (currentExperience.factor) {
         $('#factor-type').val(currentExperience.factor.type);
         $('#factor-description').val(currentExperience.factor.description);
@@ -62,11 +60,18 @@ const setDescriptionVariation = (assured, but, succeeded) => {
     $("#succeeded").text(succeeded);
 }
 
-const setOptionsVariation = (mirror, imagination, physical, mental) => {
-    $("#mirror").text(mirror);
-    $("#imagination").text(imagination);
-    $("#physical").text(physical);
-    $("#mental").text(mental);
+const setOptionsVariation = (positive = true) => {
+    if (positive) {
+        $("option[value=mirror]").html('Ik wist dat iemand anders het gelukt was.');
+        $("option[value=imagination]").html('Ik zag voor me hoe het zou lukken.');
+        $("option[value=physical]").html('Ik was helemaal fit.');
+        $("option[value=mental]").html('Ik was niet druk in mijn hoofd.');
+    } else {
+        $("option[value=mirror]").html('Ik wist dat iemand anders het ook niet gelukt was.');
+        $("option[value=imagination]").html('Ik zag voor me hoe het zou mislukken.');
+        $("option[value=physical]").html('Ik was niet helemaal fit.');
+        $("option[value=mental]").html('Ik was al druk in mijn hoofd.');
+    }
 }
 
 //save factor

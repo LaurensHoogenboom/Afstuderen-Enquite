@@ -25,22 +25,6 @@ h1, h2 {
     padding-bottom: 15px;
 }
 
-p span.block {
-    display: inline-block;
-    background-color: rgb(220,220,220);
-    padding: 10px 20px;
-    border-radius: 10px;
-    margin: 10px 10px 20px 0;
-}
-
-p span.block.hidden {
-    display: none;
-}
-
-p span.block:last-child {
-    margin-bottom: 0;
-}
-
 /*form*/
 
 form label {
@@ -59,6 +43,23 @@ form textarea:last-child, form label:last-child, input[type="number"] {
 
 form label {
     display: inline-block;
+}
+
+form label.block {
+    display: inline-block;
+    justify-self: flex-start;
+    background-color: rgb(220,220,220);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: -15px;
+}
+
+form label.block.hidden {
+    display: none;
+}
+
+form label.block:last-child {
+    margin-bottom: 0;
 }
 
 textarea, input[type="number"], select {
@@ -276,7 +277,15 @@ a.button {
     border-bottom: 1px solid rgb(220,220,220);
 }
 
+/*factors*/
 
+.influence-input-label {
+    padding-bottom: 5px;
+}
+
+.influence-textarea {
+    margin-bottom: 5px;
+}
 
 
 

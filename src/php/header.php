@@ -12,8 +12,6 @@
     <script src="/src/js/modules/moments.js"></script>
     <script src="/src/js/modules/experience.js"></script>
     <script src="/src/js/modules/factors.js"></script>
-    <script src="/src/js/modules/personal_strength.js"></script>
-    <script src="/src/js/modules/valuation.js"></script>
 </head>
 <body>
     <main>
